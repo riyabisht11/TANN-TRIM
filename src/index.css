@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "roman";
+  src: url('../src/assets/avenir-lt-std_edlas/55\ Roman.otf');
+}
+@font-face {
+  font-family: "book";
+  src: url('../src/assets/avenir-lt-std_edlas/45\ Book.otf');
+}
+@font-face {
+  font-family: "medium";
+  src: url('../src/assets/avenir-lt-std_edlas/65\ Medium.otf');
+}
