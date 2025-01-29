@@ -12,4 +12,10 @@
 @font-face {
   font-family: "medium";
   src: url('../src/assets/avenir-lt-std_edlas/65\ Medium.otf');
+
+}
+
+
+ body {
+  overflow-x: hidden;
 }

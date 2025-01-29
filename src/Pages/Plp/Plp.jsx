@@ -1,5 +1,7 @@
 import React from "react";
 import product from "../../assets/Images/Product 1.png";
+import { Link } from "react-router";
+
 
 function Plp() {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10.11,12];
@@ -12,7 +14,7 @@ function Plp() {
       </div>
       <main className=" grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14">
         {array.map((item, idx) => (
-          <div className="card pt-10 border rounded-xl border-[#D1D1D1] inline-block shadow-md ">
+          <Link to ="/pdp"  onClick={()=> window.scrollTo({top:0 , behavior:"instant"})} className="card pt-10 border rounded-xl border-[#D1D1D1] inline-block shadow-md ">
             <div>
               <img src={product} alt="" />
             </div>
@@ -33,7 +35,7 @@ function Plp() {
                 <h1>(40% OFF)</h1>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </main>
     </div>

@@ -10,6 +10,7 @@ import Features from "../../Components/Home/Pdp components/Features";
 import Similarproduct from "../../Components/Home/Pdp components/Similarproduct";
 import Customerliked from "../../Components/Home/Pdp components/Customerliked";
 
+
 function Pdp() {
   const circle = [
     { outer: "border-[#444C40]", inner: "bg-[#444C40]" },
@@ -27,6 +28,8 @@ function Pdp() {
   const swipe = [1, 2, 3, 4];
 
   return (
+  
+    
     <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-16">
       <main>
         <div className="flex flex-col lg:flex-row gap-5 gap-24 lg:gap-14 items-center lg:items-start">
@@ -212,7 +215,7 @@ function Pdp() {
     </div>
 
     // <Features/>
-    // </>
+    
   );
 }
 

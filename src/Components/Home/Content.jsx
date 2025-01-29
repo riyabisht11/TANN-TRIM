@@ -3,6 +3,7 @@ import bag from "../../assets/Images/Bag.png";
 import jwell from "../../assets/Images/Jwellery.png";
 import travel from "../../assets/Images/Travel.png";
 import gift from "../../assets/Images/Gift.png";
+import { Link } from "react-router";
 
 function Content() {
   const array = [
@@ -11,36 +12,46 @@ function Content() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
       image: bag,
       button: "SHOP NOW",
+      link: "/plp",
     },
     {
       name: "Jewelry",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
       image: jwell,
       button: "SHOP NOW",
+      link: "",
     },
     {
       name: "Travel",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
       image: travel,
       button: "SHOP NOW",
+      link: "",
     },
     {
       name: "Gifting",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
       image: gift,
       button: "SHOP NOW",
+      link: "",
     },
   ];
   return (
     <div className="max-w-screen-2xl mx-auto py-12 px-5 md:px-16 space-y-14 ">
       {array.map((item, idx) => (
         <div className="maincont ">
-          <div className="card flex gap-9 flex-col md:flex-row items-center md:items-start">
+          <div className="card flex gap-9 flex-col md:flex-row items-center ">
             <div
-              className={` left md:w-3/5  rounded-xl overflow-hidden order-first
+              className={` left  md:w-3/5 flex flex-col rounded-xl overflow-hidden order-first
                 ${idx % 2 !== 0 ? "md:order-first" : "md:order-last"} `}
             >
-              <img src={item.image} alt="" className="rounded-xl w-full" />
+              <img
+                src={item.image}
+                alt=""
+                className={`rounded-xl    ${
+                  idx % 2 !== 0 ? "self-start" : "self-end"
+                }  `}
+              />
             </div>
 
             <div className="right flex justify-center items-center md:w-2/5">
@@ -55,10 +66,18 @@ function Content() {
                     {item.text}
                   </p>
                 </div>
+
                 <div className="button py-3 md:py-8">
-                  <button className="font-ave  text-base font-semibold">
-                    {item.button}
-                  </button>
+                  <Link
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "instant" })
+                    }
+                    to={item.link}
+                  >
+                    <button className="font-ave  text-base font-semibold">
+                      {item.button}
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

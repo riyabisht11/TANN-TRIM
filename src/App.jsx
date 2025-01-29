@@ -1,5 +1,5 @@
 
-import "./App.css";
+
 import Header from "./Layout/Header";
 import Footer from "./Layout/Footer";
 import Home from "./Pages/Home/Home";
@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+    
       <Router />
     </>
   );

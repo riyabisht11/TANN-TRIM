@@ -1,5 +1,6 @@
 import React from "react";
 import bg from "../../assets/Images/background.png";
+import { Link } from "react-router";
 
 function Hero() {
   return (
@@ -14,7 +15,8 @@ function Hero() {
           <p className="font-ave text-base font-normal text-white">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit</p>
         </div>
         <div className="pt-16 ">
-          <button className="font-ave text-white text-base font-semibold">SHOP NOW</button>
+          <Link onClick={()=> window.scrollTo({top:0 , behavior:"instant"})} to="/plp"> 
+          <button className="font-ave text-white text-base font-semibold">SHOP NOW</button></Link>
         </div>
       </div>
     </div>

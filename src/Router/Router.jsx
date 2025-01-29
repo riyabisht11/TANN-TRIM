@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "../Layout/Layout";
 import Home from "../Pages/Home/Home";
 import Pdp from "../Pages/PDP/Pdp";
-import Contact from "../Pages/Contact/Contact";
 import Plp from "../Pages/Plp/Plp";
+import Checkout from "../Pages/Checkout/Checkout";
 
 function Router() {
 
@@ -16,8 +16,10 @@ function Router() {
         { path: "/", element: <Home /> },
         { path: "/pdp", element: <Pdp /> },
         { path: "/plp", element: <Plp/> },
+        
       ],
     },
+    { path: "/checkout", element:<Checkout/> },
 
   ]);
 
