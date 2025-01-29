@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../assets/SVG/whitelogo.svg";
 import cart from "../../assets/SVG/whitecart.svg";
 import cross from "../../assets/SVG/whitecross.svg";
-import searchicon from "../../assets/SVG/Searchicon.svg";
+import searchicon from "../../assets/SVG/searchicon.svg";
 
 
 function Menu({ functionality, open }) {
