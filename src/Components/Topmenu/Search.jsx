@@ -4,7 +4,7 @@ import ham from "../../assets/SVG/ham.svg";
 import logo from "../../assets/SVG/whitelogo.svg";
 import cart from "../../assets/SVG/whitecart.svg";
 import cross from "../../assets/SVG/whitecross.svg";
-import searchicon from "../../assets/SVG/SearchIcon.svg";
+import searchicon from "../../assets/SVG/Searchicon.svg";
 
 function Search({ functionality, open }) {
   const [showSearch, setshowSearch] = useState(true);
@@ -26,8 +26,13 @@ function Search({ functionality, open }) {
             </h1>
           </div>
           <div className="search flex gap-5 items-end">
-            <div >
-              <img  onClick={functionality} src={cross} alt="" className="cursor-pointer" />
+            <div>
+              <img
+                onClick={functionality}
+                src={cross}
+                alt=""
+                className="cursor-pointer"
+              />
             </div>
 
             <h1 className="font-ave text-base font-normal leading-none text-white">
