@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cross from "../../assets/SVG/whitecross.svg";
-import register from "../../assets/SVG/RegisterButton.svg";
+import register from "../../assets/SVG/Registerbutton.svg";
 
 import loginlogo from "../../assets/SVG/login.svg";
 import facebook from "../../assets/SVG/facebookwhite.svg";
