@@ -4,12 +4,11 @@ import cart from "../../assets/SVG/whitecart.svg";
 import blackarrow from "../../assets/SVG/blackarrow.svg";
 import blackdel from "../../assets/SVG/blackdel.svg";
 import arrow from "../../assets/SVG/arrow.svg";
-import play from "../../assets/svg/Play.svg";
+import play from "../../assets/SVG/Play.svg";
 import product1 from "../../assets/Images/Product 1.png";
 import Features from "../../Components/Home/Pdp components/Features";
 import Similarproduct from "../../Components/Home/Pdp components/Similarproduct";
 import Customerliked from "../../Components/Home/Pdp components/Customerliked";
-
 
 function Pdp() {
   const circle = [
@@ -28,8 +27,6 @@ function Pdp() {
   const swipe = [1, 2, 3, 4];
 
   return (
-  
-    
     <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-16">
       <main>
         <div className="flex flex-col lg:flex-row gap-5 gap-24 lg:gap-14 items-center lg:items-start">
@@ -73,7 +70,9 @@ function Pdp() {
                   <div
                     className={`flex justify-center items-center green size-4 md:size-8 rounded-full border-2 shrink-0 ${item.outer}`}
                   >
-                    <div className={`${item.inner} rounded-full size-2 md:size-3`}></div>
+                    <div
+                      className={`${item.inner} rounded-full size-2 md:size-3`}
+                    ></div>
                   </div>
                 ))}
               </div>
@@ -209,13 +208,12 @@ function Pdp() {
           </div>
         </div>
       </main>
-      <Features/>
-      <Similarproduct/>
-      <Customerliked/>
+      <Features />
+      <Similarproduct />
+      <Customerliked />
     </div>
 
     // <Features/>
-    
   );
 }
 
