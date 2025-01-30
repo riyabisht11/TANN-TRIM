@@ -4,8 +4,9 @@ import { Link } from "react-router";
 
 function Hero() {
   return (
+   
     <div className="herosec max-w-screen-2xl mx-auto relative py-5 px-5 md:px-16 h-screen overflow-hidden flex items-center justify-end">
-      <img src={bg} alt="" className="absolute inset-0 w-full h-full z-0 object-cover" />
+      <img src={bg} alt="" className=" absolute inset-0 w-full h-full z-0 object-cover" />
 
       <div className="relative z-30  ">
         <div>
@@ -20,6 +21,7 @@ function Hero() {
         </div>
       </div>
     </div>
+   
   );
 }
 

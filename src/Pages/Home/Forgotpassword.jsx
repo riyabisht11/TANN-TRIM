@@ -1,13 +1,18 @@
 import React from "react";
 import arrow from "../../assets/SVG/whitearrow.svg";
 import loading from "../../assets/SVG/loadingsign.svg";
+import { Link } from "react-router";
 
 function Forgotpassword() {
     
   return (
-    <div className="max-w-screen-2xl mx-auto px-16 py-16 bg-[#444C40] ">
+    <main className="bg-[#444C40] w-full h-full">
+    <div className="max-w-screen-2xl mx-auto px-16 py-16 bg-[#444C40] h-screen">
+      
       <div>
+        <Link to ="/">
         <img src={arrow} alt="" />
+        </Link>
       </div>
 
       <div className=" max-w-lg mx-auto flex flex-col justify-between items-center space-y-12">
@@ -31,12 +36,15 @@ function Forgotpassword() {
           </form>
 
           <div className="flex justify-center py-5 border rounded-xl w-full">
+            <Link to ="/forgotlink">
             <button className="font-roboto text-base font-medium text-white">
-              Register
+              Done
             </button>
+            </Link>
           </div>
         </div>
       </div>
+      </main>
     
   );
 }

@@ -9,7 +9,7 @@ function Customerliked() {
       <div className="">
         <h1 className="font-med text-2xl font-semibold">CUSTOMER ALSO LIKED</h1>
       </div>
-      <div className="flex overflow-x-auto gap-32 pt-10 items-center">
+      <div className="flex overflow-x-auto gap-14 md:gap-32 pt-10 items-center">
         {Similarproduct.map(() => (
           <div className="card w-52 md:w-auto  shrink-0 pt-10 border rounded-xl border-[#D1D1D1] inline-block shadow-md ">
             <div>
@@ -17,7 +17,7 @@ function Customerliked() {
             </div>
             <div className="text-black space-y-2  py-4 px-3 rounded-b-xl border-t-2 border-[#D1D1D1] ">
               <div>
-                <h1 className="font-med text-xs font-semibold">
+                <h1 className="font-med text-base md:text-xs font-semibold">
                   Lightweight Bag
                 </h1>
               </div>
@@ -36,7 +36,7 @@ function Customerliked() {
             </div>
           </div>
         ))}
-        <div className="bg-[#444C40] rounded-lg size-10 ">
+        <div className="bg-[#444C40] rounded-lg size-10 shrink-0">
           <img src={arrow} alt="" className="px-4 py-3" />
         </div>
       </div>

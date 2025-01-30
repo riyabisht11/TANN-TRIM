@@ -3,10 +3,11 @@ import cross from "../../assets/SVG/whitecross.svg";
 import loginlogo from "../../assets/SVG/login.svg";
 import facebook from "../../assets/SVG/facebookwhite.svg";
 import google from "../../assets/SVG/whitegoogle.svg";
+import { Link } from "react-router";
 
 function Login() {
   return (
-    <div className="flex flex-col space-y-12 justify-center items-center max-w-lg mx-auto py-10">
+    <div className="flex flex-col space-y-12 justify-center items-center max-w-lg mx-auto py-10 bg-[#444C40]">
       <div className="space-y-12 ">
         <img src={loginlogo} alt="" />
         <h1 className="text-white font-med text-2xl font-semibold">Log In</h1>
@@ -36,9 +37,11 @@ function Login() {
           </div>
         </div>
         <div>
+          <Link to ="/forgotpassword">
           <h1 className="font-med font-semibold text-xs lg:text-base text-white">
             Forgot Password?
           </h1>
+          </Link>
         </div>
       </div>
 

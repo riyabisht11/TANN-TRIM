@@ -12,16 +12,17 @@ function Register({ functionality, open }) {
 
 
   return (
+    <main className={`bg-[#444C40] h-screen w-full ${
+      open ? "translate-x-0" : "translate-x-full"
+    } fixed inset-0 z-[999] transform transition-transform duration-300 ease-in-out overflow-x-hidden `}>
     <div
-      className={` ${
-        open ? "translate-x-0" : "translate-x-full"
-      } max-w-screen-2xl mx-auto bg-[#444C40] px-16 py-8 h-screen w-full fixed inset-0 z-[999] transform transition-transform duration-300 ease-in-out overflow-x-hidden `}
+      className={` max-w-screen-2xl mx-auto  bg-[#444C40] px-16 py-8 relative h-full`}
     >
       <div className="flex flex-col relative lg:absolute lg:left-16 ">
         <div onClick={functionality} className="cursor-pointer">
           <img src={cross} alt="" />
         </div>
-        <div className="flex flex-col gap-5 lg:py-24 items-center md:items-start justify-center md:justify-start">
+        <div className="flex flex-col gap-5 md:py-16 lg:py-24 items-center md:items-start justify-center md:justify-start">
           <button
             onClick={() => setshowRegister(true)}
             className={`font-med font-semibold text-xl lg:text-2xl text-white transition-opacity duration-300 ease-linear ${
@@ -88,6 +89,7 @@ function Register({ functionality, open }) {
         <Login />
       )}
     </div>
+    </main>
   );
 }
 

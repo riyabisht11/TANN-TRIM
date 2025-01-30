@@ -36,7 +36,7 @@ function Similarproduct() {
             </div>
           </div>
         ))}
-        <div className="bg-[#444C40] rounded-lg size-10 ">
+        <div className="bg-[#444C40] rounded-lg size-10 shrink-0">
           <img src={arrow} alt="" className="px-4 py-3" />
         </div>
       </div>

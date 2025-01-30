@@ -9,10 +9,11 @@ import searchicon from "../../assets/SVG/searchicon.svg";
 function Search({ functionality, open }) {
   const [showSearch, setshowSearch] = useState(true);
   return (
+    <main className={`bg-[#444C40] h-screen w-full ${
+      open ? "translate-y-0" : "-translate-y-full"
+    } absolute inset-0 overflow-hidden z-[999] transform transition-transform duration-300 ease-in-out`}>
     <nav
-      className={` ${
-        open ? "translate-y-0" : "-translate-y-full"
-      } absolute inset-0 max-w-screen-2xl mx-auto py-6 px-5 md:px-16 overflow-hidden z-[999] shadow-md bg-[#444C40] transform transition-transform duration-300 ease-in-out`}
+      className={`   max-w-screen-2xl mx-auto py-6 px-5 md:px-16 shadow-md bg-[#444C40] h-full`}
     >
       <div className="navcontent flex justify-between ">
         <div className="one flex gap-15 items-end">
@@ -82,6 +83,7 @@ function Search({ functionality, open }) {
         </div>
       </div>
     </nav>
+    </main>
   );
 }
 

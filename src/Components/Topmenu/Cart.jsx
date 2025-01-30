@@ -10,11 +10,11 @@ import { Link } from "react-router";
 function Cart({ functionality, open }) {
   const cart = [1, 2];
   return (
-    <div className="min-h-screen fixed backdrop-blur-sm inset-0 w-full z-[999] max-w-screen-2xl px-16">
+    <div className="min-h-screen mx-auto fixed backdrop-blur-sm inset-0 w-full z-[999] max-w-screen-2xl px-16">
       <div
         className={`${
           open ? "" : ""
-        }  shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)]  rounded-xl max-w-lg h-[80vh] md:h-[95vh] lg:h-[656px]  overflow-y-auto xl:overflow-hidden space-y-10  fixed right-0 lg:right-16 lg:top-20  z-[999] bg-white `}
+        }  shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)] flex flex-col justify-between rounded-xl max-w-lg h-[80vh]  md:h-[656px]  overflow-y-auto xl:overflow-hidden space-y-10  fixed right-0 lg:right-16 lg:top-20  z-[999] bg-white `}
       >
         <main className="pt-8 px-6 md:px-12 card inline-flex flex-col space-y-8 lg:space-y-12 ">
           <div className=" flex border-b-2 border-[#E7E7E7] pb-3 md:pb-5 space-x-16">

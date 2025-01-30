@@ -8,10 +8,11 @@ import searchicon from "../../assets/SVG/searchicon.svg";
 function Menu({ functionality, open }) {
     const [showMenu, setshowMenu] = useState(true);
   return (
-    <nav
-      className={` ${
+    <main className={`bg-[#444C40] h-screen w-full  ${
         open ? "translate-y-0" : "-translate-y-full"
-      } absolute inset-0 max-w-screen-2xl mx-auto py-6 px-5 md:px-16 overflow-hidden z-[999] shadow-md bg-[#444C40] transform transition-transform duration-300 ease-in-out`}
+      } absolute inset-0 overflow-hidden z-[999]   transform transition-transform duration-300 ease-in-out`}>
+    <nav
+      className={` max-w-screen-2xl mx-auto py-6 px-5 md:px-16 bg-[#444C40] shadow-md h-full`}
     >
       <div className="navcontent flex justify-between ">
         <div className="one flex gap-15 items-end">
@@ -135,6 +136,7 @@ function Menu({ functionality, open }) {
         <div></div>
       </div>
     </nav>
+    </main>
   );
 }
 
