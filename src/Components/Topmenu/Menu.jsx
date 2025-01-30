@@ -10,7 +10,7 @@ function Menu({ functionality, open }) {
   return (
     <main className={`bg-[#444C40] h-screen w-full  ${
         open ? "translate-y-0" : "-translate-y-full"
-      } absolute inset-0 overflow-hidden z-[999]   transform transition-transform duration-300 ease-in-out`}>
+      } fixed inset-0 overflow-hidden z-[999]   transform transition-transform duration-300 ease-in-out`}>
     <nav
       className={` max-w-screen-2xl mx-auto py-6 px-5 md:px-16 bg-[#444C40] shadow-md h-full`}
     >

@@ -9,6 +9,7 @@ import product1 from "../../assets/Images/Product 1.png";
 import Features from "../../Components/Home/Pdp components/Features";
 import Similarproduct from "../../Components/Home/Pdp components/Similarproduct";
 import Customerliked from "../../Components/Home/Pdp components/Customerliked";
+import { Link } from "react-router";
 
 function Pdp() {
   const circle = [
@@ -29,7 +30,7 @@ function Pdp() {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-16">
       <main>
-        <div className="flex flex-col lg:flex-row gap-5 gap-24 lg:gap-14 items-center lg:items-start">
+        <div className="flex flex-col lg:flex-row gap-5 md:gap-24 lg:gap-14 items-center lg:items-start">
           <div className="left w-auto md:w-2/3 flex flex-col items-center ">
             <div>
               <img src={image1} alt="" />
@@ -44,7 +45,7 @@ function Pdp() {
             </div>
           </div>
 
-          <div className="right w-auto lg:w-1/3 pt-13 lg:pt-28 lg:pt-52 space-y-7 md:space-y-14 self-start">
+          <div className="right w-auto lg:w-1/3 pt-13 md:pt-28 lg:pt-52 space-y-7 md:space-y-14 self-start">
             <div>
               <h1 className="font-med font-semibold text-xl md:text-2xl lg:text-3xl max-w-43 md:max-w-96">
                 LIGHTWEIGHT BAG WITH POCKETS
@@ -97,10 +98,13 @@ function Pdp() {
                 ))}
               </div>
               <div className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4">
+                
                 <img src={cart} alt="" />
+                <Link to ="/checkout">
                 <button className="font-roboto font-medium text-xl lg:text-2xl text-white">
                   ADD TO BAG
                 </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -33,7 +33,7 @@ function Header() {
   };
 
   useEffect(() => {
-    if (isRegisterOpen || isSearchOpen) {
+    if (isRegisterOpen || isSearchOpen || isMenuOpen) {
       document.body.style.overflow = "hidden";
 
       // Disable scrolling
@@ -45,7 +45,7 @@ function Header() {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isRegisterOpen, isSearchOpen]);
+  }, [isRegisterOpen, isSearchOpen , isMenuOpen]);
 
   return (
     <>

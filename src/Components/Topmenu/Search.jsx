@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ham from "../../assets/SVG/ham.svg";
+import ham from "../../assets/SVG/whiteham.svg";
 
 import logo from "../../assets/SVG/whitelogo.svg";
 import cart from "../../assets/SVG/whitecart.svg";
