@@ -97,7 +97,7 @@ function Pdp() {
                   </div>
                 ))}
               </div>
-              <div className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4">
+              <div className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4 hover:brightness-125 duration-500 transition-all">
                 
                 <img src={cart} alt="" />
                 <Link to ="/checkout">
@@ -190,7 +190,7 @@ function Pdp() {
         </div>
 
         <div className="flex justify-between flex-col md:flex-row md:items-center">
-          <div className="">
+          <div data-aos="fade-right" data-aos-duration="1500" className="">
             <h1 className="font-comme text-3xl md:text-5xl lg:text-7xl xl:text-[100px] font-extralight text-[#444C40] text-center md:text-start ">
               Delight in the <br />
               Details
@@ -198,7 +198,7 @@ function Pdp() {
           </div>
 
           <div className="py-10 md:py-0">
-            <div className="relative md:shrink-0  top-0 md:-top-16 lg:-top-28">
+            <div data-aos="fade-left" data-aos-duration="1500" className="relative md:shrink-0  top-0 md:-top-16 lg:-top-28">
               <img
                 src={product1}
                 alt=""

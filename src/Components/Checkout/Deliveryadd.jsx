@@ -59,7 +59,7 @@ function Deliveryadd() {
           </label>
         </div>
       </div>
-      <div className="bg-[#444C40] flex justify-center ">
+      <div className="bg-[#444C40] flex justify-center hover:brightness-125 duration-500 transition-all">
         <button className="text-white font-med text-base font-semibold py-5 ">
           CONTINUE TO PAYMENT
         </button>

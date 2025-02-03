@@ -26,7 +26,7 @@ function Checkout() {
             <Paymentmethod />
             <Ordersummary />
             
-            <div className="bg-[#444C40] flex justify-center rounded-xl mb-5">
+            <div className="bg-[#444C40] flex justify-center rounded-xl mb-5 hover:brightness-125 duration-500 transition-all">
             <Link to ="/orderplaced">
               <button className="text-white font-roboto text-lg md:text-2xl font-medium py-4 ">
               COMPLETE ORDER

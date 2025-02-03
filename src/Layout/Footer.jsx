@@ -21,29 +21,29 @@ function Footer() {
     <div className="max-w-screen-2xl mx-auto px-5 md:px-16 bg-[#444C40] pt-16 pb-5">
       <div className="flex justify-between  flex-col lg:flex-row gap-8 lg:gap-0 items-center lg:items-start">
         <div className="shopping  text-white text-base font-normal text-center lg:text-start">
-          <ol className="space-y-3 lg:space-y-6 font-book">
-            <li className="font-semibold underline font-med">SHOPPING</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>Travel</li>
-            <li>Gift</li>
+          <ol className="space-y-3 lg:space-y-6 font-book cursor-pointer ">
+            <li className="font-semibold underline font-med hover:opacity-40">SHOPPING</li>
+            <li className="hover:opacity-40">Men</li>
+            <li className="hover:opacity-40">Women</li>
+            <li className="hover:opacity-40">Travel</li>
+            <li className="hover:opacity-40">Gift</li>
           </ol>
         </div>
         <div className="usefullinks font-ave text-white text-base font-normal text-center lg:text-start">
-          <ol className="space-y-3 lg:space-y-6 font-book">
-            <li className="font-semibold underline font-med">USEFUL LINKS</li>
-            <li>Contact Us</li>
-            <li>FAQ</li>
-            <li>Track Orders</li>
-            <li>T&C</li>
-            <li>Returns</li>
-            <li>Privacy Policy</li>
+          <ol className="space-y-3 lg:space-y-6 font-book cursor-pointer">
+            <li className="font-semibold underline font-med hover:opacity-40">USEFUL LINKS</li>
+            <li className="hover:opacity-40">Contact Us</li>
+            <li className="hover:opacity-40">FAQ</li>
+            <li className="hover:opacity-40">Track Orders</li>
+            <li className="hover:opacity-40">T&C</li>
+            <li className="hover:opacity-40">Returns</li>
+            <li className="hover:opacity-40">Privacy Policy</li>
           </ol>
         </div>
 
         <div className="keep space-y-6 text-center lg:text-start">
           <div>
-            <h1 className="text-white underline font-med">KEEP IN TOUCH</h1>
+            <h1 className="text-white underline font-med hover:opacity-40 cursor-pointer">KEEP IN TOUCH</h1>
           </div>
           <div className="icons flex justify-between space-x-4 md:space-x-8 ">
             {social.map((item, idx) => (

@@ -28,9 +28,10 @@ function Hero() {
               onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
               to="/plp"
             >
-              <button className="font-med text-white text-base font-semibold">
-                SHOP NOW
-              </button>
+             <button className="font-med text-white text-base font-semibold transition-transform duration-300 hover:scale-110">
+  SHOP NOW
+</button>
+
             </Link>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import bag from "../../assets/Images/Bag.png";
 import jwell from "../../assets/Images/Jwellery.png";
 import travel from "../../assets/Images/Travel.png";
@@ -6,6 +6,7 @@ import gift from "../../assets/Images/Gift.png";
 import { Link } from "react-router";
 
 function Content() {
+  const [isHovered, setIsHovered] = useState(false);
   const array = [
     {
       name: "Bags",
@@ -51,6 +52,8 @@ function Content() {
                 className={`rounded-xl    ${
                   idx % 2 !== 0 ? "self-end" : "self-start"
                 }  `}
+                data-aos={idx % 2 !== 0 ? "fade-left" : "fade-right"}
+                data-aos-duration="1500"
               />
             </div>
 
@@ -67,18 +70,24 @@ function Content() {
                   </p>
                 </div>
 
-                <div className="button py-3 md:py-8">
-                  <Link
-                    onClick={() =>
-                      window.scrollTo({ top: 0, behavior: "instant" })
-                    }
-                    to={item.link}
-                  >
-                    <button className="font-med  text-base font-semibold">
+                <Link
+                  className="button py-3 md:py-8 flex justify-center"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "instant" })
+                  }
+                  to={item.link}
+                >
+                  
+                  <button className="relative text-black font-semibold py-3 lg:py-5 px-3 lg:px-5 flex items-center gap-10 lg:gap-20 text-xs md:text-sm lg:text-base overflow-hidden justify-center group">
+                    {/* Background animation */}
+                    <span className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+
+                    {/* Text content */}
+                    <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
                       {item.button}
-                    </button>
-                  </Link>
-                </div>
+                    </span>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

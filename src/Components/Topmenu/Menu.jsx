@@ -54,11 +54,11 @@ function Menu({ functionality, open }) {
 
       <div className="flex justify-between py-20">
         <div>
-          <ul className="text-white font-med font-semibold text-2xl space-y-6">
+          <ul className="text-white font-med font-semibold text-2xl space-y-6 cursor-pointer">
             <li>Bags</li>
-            <li className="opacity-40">Jewelry</li>
-            <li className="opacity-40">Travel</li>
-            <li className="opacity-40">Gifting</li>
+            <li className="opacity-40 hover:opacity-100">Jewelry</li>
+            <li className="opacity-40 hover:opacity-100">Travel</li>
+            <li className="opacity-40 hover:opacity-100">Gifting</li>
           </ul>
           <h1 className="text-white text-base font-med font-semibold pt-20">
             Track
@@ -66,9 +66,9 @@ function Menu({ functionality, open }) {
         </div>
 
         <div>
-          <ul className="space-y-9">
+          <ul className="space-y-9 cursor-pointer ">
             <div className="flex gap-5">
-              <li className="font-med text-base text-white opacity-40">
+              <li className="font-med text-base text-white opacity-40 hover:opacity-100">
                 Backpacks
               </li>
               <button className="py-1 px-2 bg-white rounded-sm text-[8px] text-black">
@@ -76,12 +76,12 @@ function Menu({ functionality, open }) {
               </button>
             </div>
 
-            <li className="font-med text-base text-white opacity-40">
+            <li className="font-med text-base text-white opacity-40 hover:opacity-100">
               Tote Bags
             </li>
 
             <div className="flex gap-5">
-              <li className="font-med text-base text-white opacity-40">
+              <li className="font-med text-base text-white opacity-40 hover:opacity-100">
                 Slings
               </li>
               <button className="py-1 px-2 bg-white rounded-sm text-[8px] text-black">
@@ -89,16 +89,16 @@ function Menu({ functionality, open }) {
               </button>
             </div>
 
-            <li className="font-med text-base text-white opacity-40">
+            <li className="font-med text-base text-white opacity-40 hover:opacity-100">
               Leather Bags
             </li>
 
-            <li className="font-med text-base text-white opacity-40">
+            <li className="font-med text-base text-white opacity-40 hover:opacity-100">
               Wallets
             </li>
 
             <div className="flex gap-5">
-              <li className="font-med text-base text-white opacity-40">
+              <li className="font-med text-base text-white opacity-40 hover:opacity-100">
                 Zip Wallet
               </li>
               <button className="py-1 px-2 bg-white rounded-sm text-[8px] text-black">
@@ -109,11 +109,11 @@ function Menu({ functionality, open }) {
         </div>
 
         <div>
-          <ul className="space-y-6">
-            <li className="font-med text-base text-white opacity-40">Passport Holder</li>
+          <ul className="space-y-6 cursor-pointer">
+            <li className="font-med text-base text-white opacity-40 hover:opacity-100">Passport Holder</li>
 
             <div className="flex gap-5">
-              <li className="font-med text-base text-white opacity-40">
+              <li className="font-med text-base text-white opacity-40 hover:opacity-100">
               Phone and Laptop Covers
               </li>
               <button className="py-1 px-2 bg-white rounded-sm text-[8px] text-black">
@@ -121,10 +121,10 @@ function Menu({ functionality, open }) {
               </button>
             </div>
 
-            <li className="font-med text-base text-white opacity-40">Pouches</li>
+            <li className="font-med text-base text-white opacity-40 hover:opacity-100">Pouches</li>
 
             <div className="flex gap-5">
-              <li className="font-med text-base text-white opacity-40">
+              <li className="font-med text-base text-white opacity-40 hover:opacity-100">
               Clearance Sale
               </li>
               <button className="py-1 px-2 bg-white rounded-sm text-[8px] text-black">

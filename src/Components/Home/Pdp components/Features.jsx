@@ -36,7 +36,10 @@ function Features() {
           <div  className={` w-1/2 md:w-auto mx-auto md:mx-0 right pt-5 order-last
                 ${
               idx % 2 !== 0 ? "md:order-first" : "md:order-last"
-            } `}>
+            } `}
+            data-aos={idx % 2 !== 0 ? "fade-right" : "fade-left"}
+      
+                data-aos-duration="1500">
             <img src={item.img} alt="" />
           </div>
         </div>

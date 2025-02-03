@@ -25,8 +25,8 @@ function Register({ functionality, open }) {
         <div className="flex flex-col gap-5 md:py-16 lg:py-24 items-center md:items-start justify-center md:justify-start">
           <button
             onClick={() => setshowRegister(true)}
-            className={`font-med font-semibold text-xl lg:text-2xl text-white transition-opacity duration-300 ease-linear ${
-              showRegister ? "opacity-100" : "opacity-40"
+            className={`font-med font-semibold text-xl lg:text-2xl hover:opacity-100 text-white transition-opacity duration-300 ease-linear ${
+              showRegister ? "opacity-100" : "opacity-40 "
             }`}
           >
             Register
@@ -36,8 +36,8 @@ function Register({ functionality, open }) {
               console.log("click");
               setshowRegister(false);
             }}
-            className={`font-med font-semibold text-xl lg:text-2xl text-white transition-opacity duration-300 ease-linear ${
-              showRegister ? "opacity-40" : "opacity-100"
+            className={`font-med font-semibold text-xl lg:text-2xl hover:opacity-100 text-white transition-opacity duration-300 ease-linear ${
+              showRegister ? "opacity-40 " : "opacity-100 "
             } `}
           >
             Log In

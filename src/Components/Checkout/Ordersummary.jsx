@@ -34,7 +34,7 @@ function Ordersummary() {
           </div>
         </div>
       </main>
-      <div className="bg-[#444C40] flex justify-between px-12 mt-16">
+      <div className="bg-[#444C40] flex justify-between px-12 mt-16 hover:brightness-125 duration-500 transition-all">
         <div className="text-white font-med text-base font-semibold py-5 ">
           <h1>ORDER TOTAL</h1>
         </div>
