@@ -26,7 +26,7 @@ function Register({ functionality, open }) {
           <button
             onClick={() => setshowRegister(true)}
             className={`font-med font-semibold text-xl lg:text-2xl hover:opacity-100 text-white transition-opacity duration-300 ease-linear ${
-              showRegister ? "opacity-100" : "opacity-40 "
+              showRegister ? "opacity-100" : "opacity-40 hover:scale-110"
             }`}
           >
             Register
@@ -45,15 +45,15 @@ function Register({ functionality, open }) {
         </div>
       </div>
       {showRegister ? (
-        <div className="flex flex-col space-y-12 justify-center items-center max-w-lg mx-auto py-10">
+        <div className="flex flex-col space-y-12 justify-center items-center max-w-lg lg:w-[500px] mx-auto py-10  lg:absolute lg:left-1/2 lg:-translate-x-1/2  lg:top-1/2 lg:-translate-y-1/2">
           <div className="space-y-12 ">
             <img src={register} alt="" />
             <h1 className="text-white font-med text-2xl font-semibold">
               Register
             </h1>
           </div>
-          <form action="" className="w-full">
-            <div className="flex flex-col gap-12 w-full">
+         <form action="" className="w-full">
+            <div className="flex flex-col gap-12 w-full justify-center">
               <input
                 type="text"
                 placeholder="Full Name"

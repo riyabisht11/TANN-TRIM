@@ -12,7 +12,7 @@ function Menu({ functionality, open }) {
         open ? "translate-y-0" : "-translate-y-full"
       } fixed inset-0 overflow-hidden z-[999]   transform transition-transform duration-300 ease-in-out`}>
     <nav
-      className={` max-w-screen-2xl mx-auto py-6 px-5 md:px-16 bg-[#444C40] shadow-md h-full`}
+      className={` max-w-screen-2xl mx-auto py-6 px-5 md:px-16 bg-[#444C40] h-full`}
     >
       <div className="navcontent flex justify-between ">
         <div className="one flex gap-15 items-end">

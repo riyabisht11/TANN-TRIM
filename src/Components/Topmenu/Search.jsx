@@ -72,13 +72,13 @@ function Search({ functionality, open }) {
           </form>
         </div>
         <div className="py-20  justify-between items-center ">
-          <ul className="font-med text-base font-normal text-white opacity-40 space-y-5">
-            <li>Backpacks</li>
-            <li>Tote Bags</li>
-            <li>Slings</li>
-            <li>Leather Bags</li>
-            <li>Wallets</li>
-            <li>Zip Wallet</li>
+          <ul className="font-med text-base font-normal text-white  space-y-5 cursor-pointer">
+            <li className="transition-all opacity-40 hover:opacity-100">Backpacks</li>
+            <li className="transition-all opacity-40 hover:opacity-100">Tote Bags</li>
+            <li className="transition-all opacity-40 hover:opacity-100">Slings</li>
+            <li className="transition-all opacity-40 hover:opacity-100">Leather Bags</li>
+            <li className="transition-all opacity-40 hover:opacity-100">Wallets</li>
+            <li className="transition-all opacity-40 hover:opacity-100">Zip Wallet</li>
           </ul>
         </div>
       </div>

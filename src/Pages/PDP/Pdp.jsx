@@ -28,7 +28,7 @@ function Pdp() {
   const swipe = [1, 2, 3, 4];
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-16">
+    <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-16 overflow-x-hidden">
       <main>
         <div className="flex flex-col lg:flex-row gap-5 md:gap-24 lg:gap-14 items-center lg:items-start">
           <div className="left w-auto md:w-2/3 flex flex-col items-center ">
@@ -97,15 +97,15 @@ function Pdp() {
                   </div>
                 ))}
               </div>
+                <Link to ="/checkout">
               <div className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4 hover:brightness-125 duration-500 transition-all">
                 
                 <img src={cart} alt="" />
-                <Link to ="/checkout">
-                <button className="font-roboto font-medium text-xl lg:text-2xl text-white">
+                <button className="font-roboto font-normal text-lg lg:text-xl text-white">
                   ADD TO BAG
                 </button>
-                </Link>
               </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ function Features() {
     },
   ];
   return (
-    <div className="max-w-screen-2xl mx-auto space-y-16 lg:space-y-0 py-8 lg:py-[140px]">
+    <div className="max-w-screen-2xl mx-auto space-y-16 lg:space-y-0 py-8 lg:py-[140px] overflow-x-hidden">
       {details.map((item, idx) => (
         <div className="flex gap-5 md:gap-32 justify-center flex-col md:flex-row">
           <div className={`max-w-[350px]   mx-auto md:mx-0 ${idx==1 ? "md:self-end md:pb-10 lg:pb-20" :  " md:pt-10 lg:pt-20"}`}>

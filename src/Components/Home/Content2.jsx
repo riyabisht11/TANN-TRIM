@@ -4,7 +4,7 @@ import play from '../../assets/SVG/Play.svg'
 
 function Content2() {
   return (
-    <div className='max-w-screen-2xl mx-auto px-5 md:px-16 py-14'>
+    <div className='max-w-screen-2xl mx-auto px-5 md:px-16 py-14 overflow-x-hidden'>
         <div className='flex justify-between flex-col md:flex-row gap-8 md:gap-0'>
             <div data-aos="fade-right" data-aos-duration="1500" className="left font-book font-normal text-xl md:text-2xl  text-center md:text-start max-w-[735px] text-[#9A9A9A] flex items-center">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisc.</h1>

@@ -38,7 +38,7 @@ function Content() {
     },
   ];
   return (
-    <div className="max-w-screen-2xl mx-auto py-12 px-5 md:px-16 space-y-14 ">
+    <div className="max-w-screen-2xl mx-auto py-12 px-5 md:px-16 space-y-14 overflow-x-hidden">
       {array.map((item, idx) => (
         <div className="maincont ">
           <div className="card flex gap-9 flex-col md:flex-row items-center ">

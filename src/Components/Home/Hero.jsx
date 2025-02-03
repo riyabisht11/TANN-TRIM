@@ -11,7 +11,7 @@ function Hero() {
         className=" absolute inset-0 w-full h-full z-0 object-cover rounded-b-2xl"
       />
 
-      <div className="herosec max-w-screen-2xl mx-auto relative py-5 px-5 md:px-16 h-screen overflow-hidden flex items-center justify-end">
+      <div className="herosec max-w-screen-2xl mx-auto relative py-5 px-5 md:px-16 h-screen overflow-hidden flex items-center justify-end ">
         <div className="relative z-30  ">
           <div>
             <h1 className="font-med text-2xl font-semibold text-white">
