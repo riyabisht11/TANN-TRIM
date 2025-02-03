@@ -16,7 +16,7 @@ function Register({ functionality, open }) {
       open ? "translate-x-0" : "translate-x-full"
     } fixed inset-0 z-[999] transform transition-transform duration-300 ease-in-out overflow-x-hidden `}>
     <div
-      className={` max-w-screen-2xl mx-auto  bg-[#444C40] px-16 py-8 relative h-full`}
+      className={` max-w-screen-2xl mx-auto  bg-[#444C40] px-16 py-8 relative h-full `}
     >
       <div className="flex flex-col relative lg:absolute lg:left-16 ">
         <div onClick={functionality} className="cursor-pointer">
@@ -57,24 +57,24 @@ function Register({ functionality, open }) {
               <input
                 type="text"
                 placeholder="Full Name"
-                className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
+                className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
               <input
                 type="Email"
                 placeholder="Email Id"
-                className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
+                className=" text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
               <input
-                type="Number"
+                type="tel"
                 name=""
                 id=""
                 placeholder="Phone Number "
-                className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
+                className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
               <input
                 type="password"
                 placeholder="Password"
-                className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
+                className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
             </div>
           </form>

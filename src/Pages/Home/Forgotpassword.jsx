@@ -7,15 +7,15 @@ function Forgotpassword() {
     
   return (
     <main className="bg-[#444C40] w-full h-full">
-    <div className="max-w-screen-2xl mx-auto px-16 py-16 bg-[#444C40] h-screen">
+    <div className="max-w-screen-2xl mx-auto px-16 py-16 bg-[#444C40] h-screen relative flex  justify-center items-center">
       
-      <div>
+      <div className="absolute left-5 md:left-16  top-8 md:top-16">
         <Link to ="/">
         <img src={arrow} alt="" />
         </Link>
       </div>
 
-      <div className=" max-w-lg mx-auto flex flex-col justify-between items-center space-y-12">
+      <div className=" w-[490px] flex flex-col justify-between items-center space-y-12">
         <div>
           <img src={loading} alt="" />
         </div>
@@ -30,7 +30,7 @@ function Forgotpassword() {
             <input
               type="Email"
               placeholder="Email Id"
-              className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold w-full"
+              className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold w-full"
             />
           </div>
           </form>

@@ -17,30 +17,34 @@ function Login() {
           <input
             type="text"
             placeholder="Full Name"
-            className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
+            className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
           />
           <input
             type="password"
             placeholder="Password"
-            className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
+            className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
           />
         </div>
       </form>
 
       <div className="flex justify-between w-full">
         <div className="flex gap-1 items-center">
-          <div className="size-2 lg:size-4 opacity-40 border-2 rounded-sm border-white"></div>
-          <div>
-            <h1 className="font-med font-semibold text-xs lg:text-base text-white opacity-40">
+
+          <label className="flex items-center space-x-2 cursor-pointer">
+            <input
+              type="checkbox"
+              className="w-4 h-4 accent-white opacity-40"
+            />
+            <span className="font-med font-semibold text-xs lg:text-base text-white opacity-40">
               Remember me
-            </h1>
-          </div>
+            </span>
+          </label>
         </div>
         <div>
-          <Link to ="/forgotpassword">
-          <h1 className="font-med font-semibold text-xs lg:text-base text-white">
-            Forgot Password?
-          </h1>
+          <Link to="/forgotpassword">
+            <h1 className="font-med font-semibold text-xs lg:text-base text-white">
+              Forgot Password?
+            </h1>
           </Link>
         </div>
       </div>

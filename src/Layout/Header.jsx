@@ -53,7 +53,8 @@ function Header() {
       <Search functionality={toggleSearch} open={isSearchOpen} />
       <Menu functionality={toggleMenu} open={isMenuOpen} />
       { isCartOpen && <Cart functionality={toggleCart}  />}
-      <nav className="max-w-screen-2xl mx-auto py-6 px-5 md:px-16 overflow-hidden shadow-md">
+      <div className="shadow-[0px_5px_20px_0px_rgba(0,_0,_0,_0.1)]">
+      <nav className="max-w-screen-2xl mx-auto py-6 px-5 md:px-16 overflow-hidden ">
         <div className="navcontent flex justify-between items-center">
           <div className="one lg:flex  hidden lg:gap-15 items-end">
             <div className="menu  flex lg:gap-6 lg:pr-24 items-end">
@@ -94,11 +95,12 @@ function Header() {
 
             <div onClick={toggleCart} className="cart  relative inline-block">
               <div className="absolute bg-[#444C40] text-white rounded-full size-4 text-xs flex justify-center items-center -top-1 -right-2 ">0</div>
-              <img src={cart} alt="" />
+              <img src={cart} alt="" className="cursor-pointer" />
             </div>
           </div>
         </div>
       </nav>
+      </div>
     </>
   );
 }

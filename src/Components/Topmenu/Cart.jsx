@@ -76,13 +76,13 @@ function Cart({ functionality, open }) {
           <h1 className="font-med text-[#444C40] text-base font-normal">
             ₹ 7,140.00
           </h1> */}
-            <div className=" flex flex-col space-y-2 font-med text-xs lg:text-base font-semibold text-[#444C40] border-r-2 pr-8">
+            <div className=" flex flex-col space-y-2 font-med text-xs lg:text-base  text-[#444C40] border-r-2 pr-8">
               <h1>Item</h1>
               <h1>Shipping</h1>
               <h1>Subtotal</h1>
             </div>
 
-            <div className="flex flex-col space-y-2 font-med text-xs lg:text-base font-semibold text-[#444C40] pl-8">
+            <div className="flex flex-col space-y-2 font-med text-xs lg:text-base  text-[#444C40] pl-8">
               <h1>₹ 7,140.00</h1>
               <h1>Free</h1>
               <h1>₹ 7,140.00</h1>
@@ -92,7 +92,7 @@ function Cart({ functionality, open }) {
         <div className="bg-[#444C40] flex justify-center ">
           <Link
             to="/checkout"
-            className="text-white font-med text-base font-semibold py-5 "
+            className="text-white font-med text-base  py-5 "
           >
             CONTINUE WITH PURCHASE
           </Link>

@@ -43,13 +43,13 @@ function Content() {
           <div className="card flex gap-9 flex-col md:flex-row items-center ">
             <div
               className={` left  md:w-3/5 flex flex-col rounded-xl overflow-hidden order-first
-                ${idx % 2 !== 0 ? "md:order-first" : "md:order-last"} `}
+                ${idx % 2 !== 0 ? "md:order-last" : "md:order-first"} `}
             >
               <img
                 src={item.image}
                 alt=""
                 className={`rounded-xl    ${
-                  idx % 2 !== 0 ? "self-start" : "self-end"
+                  idx % 2 !== 0 ? "self-end" : "self-start"
                 }  `}
               />
             </div>
@@ -57,12 +57,12 @@ function Content() {
             <div className="right flex justify-center items-center md:w-2/5">
               <div className=" text-center">
                 <div className="heading">
-                  <h1 className="font-ave text-2xl font-semibold ">
+                  <h1 className="font-med text-2xl font-semibold ">
                     {item.name}
                   </h1>
                 </div>
                 <div className="text  py-6">
-                  <p className="font-ave text-base font-normal max-w-72 text-center text-[#9A9A9A]">
+                  <p className="font-book text-base font-normal max-w-72 text-center text-[#9A9A9A]">
                     {item.text}
                   </p>
                 </div>
@@ -74,7 +74,7 @@ function Content() {
                     }
                     to={item.link}
                   >
-                    <button className="font-ave  text-base font-semibold">
+                    <button className="font-med  text-base font-semibold">
                       {item.button}
                     </button>
                   </Link>

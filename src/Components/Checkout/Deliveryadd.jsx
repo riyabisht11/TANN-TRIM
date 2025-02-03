@@ -5,11 +5,11 @@ function Deliveryadd() {
     { name: "Email Id", type: "email", id: "email" },
     { name: "First Name", type: "text", id: "text" },
     { name: "Last Name", type: "text", id: "text" },
-    { name: "Telephone", type: "number", id: "number" },
+    { name: "Telephone", type: "tel", id: "number" },
     { name: "Delivery Address", type: "text", id: "text" },
     { name: "Town", type: "text", id: "text" },
     { name: "State / Territory", type: "text", id: "text" },
-    { name: "Postcode", type: "number", id: "number" },
+    { name: "Postcode", type: "text", id: "number" },
     { name: "Country", type: "text", id: "text" },
   ];
   return (
@@ -28,27 +28,35 @@ function Deliveryadd() {
         <div className="">
           <form action="">
             <div className="space-y-6">
-            {array.map((item, idx) => (
-              <div className="flex flex-col gap-2 ">
-                <label for="email" className="text-[#C7CAC6] text-xs font-semibold font-med">{item.name}</label>
-                <input
-                  type={item.type}
-                  id={item.id}
-                  className="rounded-lg  border border-[#E7E7E7] px-5 py-3 text-[#444C40] font-med font-semibold text-xs "
-                />
-              </div>
-            ))}
+              {array.map((item, idx) => (
+                <div className="flex flex-col gap-2 ">
+                  <label
+                    for="email"
+                    className="text-[#C7CAC6] text-xs font-semibold font-med"
+                  >
+                    {item.name}
+                  </label>
+                  <input
+                    type={item.type}
+                    id={item.id}
+                    className="rounded-lg  border border-[#E7E7E7] px-5 py-3 text-[#444C40] font-med font-semibold text-xs "
+                  />
+                </div>
+              ))}
             </div>
           </form>
         </div>
 
         <div className="flex gap-2 pt-9">
-          <div className=" size-4 border-2 border-[#444C40] border-opacity-30 rounded-sm flex justify-center items-center"></div>
-          <div>
-            <h1 className="text-[#C7CAC6] text-sm font-semibold font-med flex justify-center items-center">
+          <label className="flex items-center space-x-2 cursor-pointer">
+            <input
+              type="checkbox"
+              className="w-4 h-4 border-2 rounded-sm accent-[#444C40] opacity-40"
+            />
+            <span className="text-[#C7CAC6] text-sm font-semibold flex items-center">
               Same billing address
-            </h1>
-          </div>
+            </span>
+          </label>
         </div>
       </div>
       <div className="bg-[#444C40] flex justify-center ">

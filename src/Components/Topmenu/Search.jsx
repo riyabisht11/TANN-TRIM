@@ -66,7 +66,7 @@ function Search({ functionality, open }) {
               <input
                 type="text"
                 placeholder="Type here ..."
-                className="bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
+                className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
             </div>
           </form>

@@ -165,7 +165,7 @@ function Pdp() {
             </div>
             <div className="bg-white flex justify-between w-[250px] md:w-[350px] px-3 py-2  text-sm rounded-lg items-center border-2">
               <div>
-                <input type="number" id="number" name="number" />
+                <input type="text" id="number"  className="focus:outline-none" />
               </div>
               <div className="bg-[#444C40] rounded-lg ">
                 <img src={arrow} alt="" className="px-2 md:px-4 py-2 md:py-3" />
