@@ -23,7 +23,7 @@ function Plp() {
             key={idx}
             onMouseEnter={() => setHoveredIndex(idx)} // Set hovered index
             onMouseLeave={() => setHoveredIndex(null)} // Reset on mouse leave
-            className="relative"
+            className="relative mx-auto"
           >
             <Link
               to="/pdp"
