@@ -11,7 +11,8 @@ function Hero() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full z-0 object-cover rounded-b-2xl"
+        poster="/src/assets/Images/herobg.jpg"
+        className="absolute inset-0 w-full h-full z-0 object-center object-cover rounded-b-2xl" 
       >
         <source src="/src/assets/Videos/bagvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
