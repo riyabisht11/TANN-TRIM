@@ -1,6 +1,8 @@
 import React from "react";
-import bg from "../../assets/Images/background.png";
+import bg from "../../assets/Images/herobg.jpg";
 import { Link } from "react-router";
+import bgvideo from "../../assets/Videos/bagvideo.mp4"
+
 
 function Hero() {
   return (
@@ -11,10 +13,10 @@ function Hero() {
         loop
         muted
         playsInline
-        poster="/src/assets/Images/herobg.jpg"
+        poster={bg}
         className="absolute inset-0 w-full h-full z-0 object-center object-cover rounded-b-2xl" 
       >
-        <source src="/src/assets/Videos/bagvideo.mp4" type="video/mp4" />
+        <source src={bgvideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="w-full h-full bg-black/40 absolute inset-0"></div>
