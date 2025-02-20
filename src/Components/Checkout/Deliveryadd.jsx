@@ -26,7 +26,7 @@ function Deliveryadd() {
           </h1>
         </div>
         <div className="">
-          <form action="">
+          <form action="" className="">
             <div className="space-y-6">
               {array.map((item, idx) => (
                 <div className="flex flex-col gap-2 ">
@@ -39,7 +39,7 @@ function Deliveryadd() {
                   <input
                     type={item.type}
                     id={item.id}
-                    className="rounded-lg  border border-[#E7E7E7] px-5 py-3 text-[#444C40] font-med font-semibold text-xs "
+                    className="rounded-lg outline-none border border-[#E7E7E7] px-5 py-3 text-[#444C40] font-med font-semibold text-xs "
                   />
                 </div>
               ))}

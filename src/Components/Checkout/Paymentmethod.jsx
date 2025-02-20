@@ -20,13 +20,13 @@ function Paymentmethod() {
         </div>
         <div className="border border-[#E7E7E7] rounded-xl">
         {array.map((item, idx) => (
-          <div className= {`px-7 py-5 flex justify-between w-full lg:w-[648px] ${idx===array.length-1 ? "" :"border-b border-[#E7E7E7]"}`}>
+          <div className= {`px-7 py-5 flex justify-between cursor-pointer  hover:bg-[#444C40]/30 hover:text-white  w-full lg:w-[648px] ${idx===array.length-1 ? "" :"border-b border-[#E7E7E7]"}` }>
             <div className="flex gap-7">
               <div>
                 <img src={item.img} alt="" />
               </div>
               <div className="flex justify-center items-center">
-                <h1 className="text-[#444C40] text-base font-semibold font-med">
+                <h1 className="text-[#444C40]  text-base font-semibold font-med">
                   {item.name}
                 </h1>
               </div>

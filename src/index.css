@@ -3,15 +3,15 @@
 @tailwind utilities;
 @font-face {
   font-family: "roman";
-  src: url('../src/assets/avenir-lt-std_edlas/55\ Roman.otf');
+  src: url('../src/assets/avenir-lt-std_edlas/55Roman.otf');
 }
 @font-face {
   font-family: "book";
-  src: url('../src/assets/avenir-lt-std_edlas/45\ Book.otf');
+  src: url('../src/assets/avenir-lt-std_edlas/45Book.otf');
 }
 @font-face {
   font-family: "medium";
-  src: url('../src/assets/avenir-lt-std_edlas/65\ Medium.otf');
+  src: url('../src/assets/avenir-lt-std_edlas/65Medium.otf');
 
 }
 

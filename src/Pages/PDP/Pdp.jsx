@@ -1,5 +1,5 @@
 import image1 from "../../assets/Images/Pdpimg.png";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import cart from "../../assets/SVG/whitecart.svg";
 import blackarrow from "../../assets/SVG/blackarrow.svg";
 import blackdel from "../../assets/SVG/blackdel.svg";
@@ -10,6 +10,7 @@ import Features from "../../Components/Home/Pdp components/Features";
 import Similarproduct from "../../Components/Home/Pdp components/Similarproduct";
 import Customerliked from "../../Components/Home/Pdp components/Customerliked";
 import { Link } from "react-router";
+import video from "../../assets/Videos/productvideo.mp4";
 
 function Pdp() {
   const circle = [
@@ -27,8 +28,22 @@ function Pdp() {
   };
   const swipe = [1, 2, 3, 4];
 
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
-    <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-16 overflow-x-hidden">
+    <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-12 overflow-x-hidden">
       <main>
         <div className="flex flex-col lg:flex-row gap-5 md:gap-24 lg:gap-14 items-center lg:items-start">
           <div className="left w-auto md:w-2/3 flex flex-col items-center ">
@@ -57,8 +72,8 @@ function Pdp() {
                 inclusive of all taxes
               </h1>
             </div>
-            <div className="space-y-7 lg:space-y-14">
-              <div className="font-book text-xs md:text-base font-normal">
+            <div className="space-y-7 lg:space-y-12">
+              <div className="font-book text-xs md:text-base font-normal text-[#707070]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -97,15 +112,16 @@ function Pdp() {
                   </div>
                 ))}
               </div>
-                <Link to ="/checkout">
-              <div className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4 hover:brightness-125 duration-500 transition-all">
-                
-                <img src={cart} alt="" />
-                <button className="font-roboto font-normal text-lg lg:text-xl text-white">
-                  ADD TO BAG
-                </button>
+              <div>
+                <Link to="/checkout" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                  <div className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4 hover:brightness-125 duration-500 transition-all">
+                    <img src={cart} alt="" />
+                    <button className="font-roboto font-normal text-lg lg:text-xl text-white">
+                      ADD TO BAG
+                    </button>
+                  </div>
+                </Link>
               </div>
-              </Link>
             </div>
           </div>
         </div>
@@ -165,7 +181,7 @@ function Pdp() {
             </div>
             <div className="bg-white flex justify-between w-[250px] md:w-[350px] px-3 py-2  text-sm rounded-lg items-center border-2">
               <div>
-                <input type="text" id="number"  className="focus:outline-none" />
+                <input type="text" id="number" className="focus:outline-none" />
               </div>
               <div className="bg-[#444C40] rounded-lg ">
                 <img src={arrow} alt="" className="px-2 md:px-4 py-2 md:py-3" />
@@ -198,16 +214,29 @@ function Pdp() {
           </div>
 
           <div className="py-10 md:py-0">
-            <div data-aos="fade-left" data-aos-duration="1500" className="relative md:shrink-0  top-0 md:-top-16 lg:-top-28">
-              <img
-                src={product1}
-                alt=""
-                className="rounded-full mx-auto md:mx-0 size-[250px] lg:size-[350px] xl:size-[502px]"
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              className="relative md:shrink-0 top-0 md:-top-16 lg:-top-28 w-[250px] lg:w-[350px] xl:w-[502px] aspect-square rounded-full overflow-hidden mx-auto md:mx-0"
+            >
+              {/* Video Element */}
+              <video
+                ref={videoRef}
+                src={video}
+                className="w-full h-full object-cover"
+                loop
+                playsInline
+                poster={product1}
               />
-              <div className="bg-black bg-opacity-40 absolute inset-0  md:w-full md:h-full rounded-full mx-auto md:mx-0 size-[250px] lg:size-[350px] xl:size-[502px] "></div>
-              <div className="absolute z-40 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 cursor-pointer">
-                <img src={play} alt="" />
-              </div>
+
+              {!isPlaying && (
+                <div
+                  className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center cursor-pointer"
+                  onClick={togglePlay}
+                >
+                  <img src={play} alt="Play Button" className="w-16 md:w-20" />
+                </div>
+              )}
             </div>
           </div>
         </div>

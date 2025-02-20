@@ -25,15 +25,15 @@ function Hero() {
         <div className="relative z-30  ">
           <div>
             <h1 className="font-med text-2xl font-semibold text-white">
-              Lorem ipsum
+            Shoulder Bag
             </h1>
           </div>
-          <div className="pt-5">
+          <div className="pt-5 max-w-[300px]">
             <p className="font-book text-base font-normal text-white">
-              Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit
+            Elevate your everyday look with our sleek and stylish shoulder bag, the perfect companion for work, travel, and casual outings.
             </p>
           </div>
-          <div className="pt-16 ">
+          <div className="pt-10 ">
             <Link
               onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
               to="/plp"
