@@ -13,7 +13,7 @@ const cartSlice = createSlice({
     addToCart: (state, action) => {
       const newItem = action.payload;
       // Convert the price string to a number.
-      const priceNumber = parseFloat(newItem.price.replace(/[^\d.]/g, ""));
+      const priceNumber = parseFloat(newItem.discountedPrice.replace(/[^\d.]/g, ""));
 
       // Check if item with same id already exists in the cart.
       const existingItem = state.cartItems.find(
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
 
       // Recalculate total amount.
       state.totalAmount = state.cartItems.reduce((total, item) => {
-        const itemPrice = parseFloat(item.price.replace(/[^\d.]/g, ""));
+        const itemPrice = parseFloat(item.discountedPrice.replace(/[^\d.]/g, ""));
         return total + itemPrice * item.quantity;
       }, 0);
     },
@@ -40,6 +40,10 @@ const cartSlice = createSlice({
       state.cartItems = state.cartItems.filter(
         (item) => item.id !== action.payload
       );
+      state.totalAmount = state.cartItems.reduce((total, item) => {
+        const itemPrice = parseFloat(item.discountedPrice.replace(/[^\d.]/g, ""));
+        return total + itemPrice * item.quantity;
+      }, 0);
     },
   },
 });
