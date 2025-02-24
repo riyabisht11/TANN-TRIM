@@ -11,8 +11,12 @@ import Cart from "../Components/Topmenu/Cart";
 import { useSelector } from "react-redux";
 
 
+
+
+
 function Header() {
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const toggleRegister = () => {
     setIsRegisterOpen(!isRegisterOpen);
@@ -97,7 +101,7 @@ function Header() {
             </div>
 
             <div onClick={toggleCart} className="cart  relative inline-block">
-              <div className="absolute bg-[#444C40] text-white rounded-full size-4 text-xs flex justify-center items-center -top-1 -right-2 ">{cartItems.length}</div>
+              <div className="absolute bg-[#444C40] text-white rounded-full size-4 text-xs flex justify-center items-center -top-1 -right-2 ">{totalQuantity}</div>
               <img src={cart} alt="" className="cursor-pointer" />
             </div>
           </div>
@@ -105,6 +109,7 @@ function Header() {
       </nav>
       </div>
     </>
+    
   );
 }
 

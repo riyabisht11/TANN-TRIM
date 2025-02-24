@@ -171,7 +171,7 @@ function Plp() {
             className="relative mx-auto"
           >
             <div
-              onClick={() => handleAddToCart(item)}
+              
              
               className={`card pt-10 border rounded-xl border-[#D1D1D1] inline-block shadow-md 
                 transition duration-300 ease-in-out ${
@@ -197,7 +197,7 @@ function Plp() {
                 <img src={product} alt="Bag" className="w-full" />
               </div>
 
-              <div className="bg-[#444C40] space-y-4 text-white py-5 px-7 rounded-b-xl">
+              <div onClick={() => handleAddToCart(item)} className="bg-[#444C40] space-y-4 text-white py-5 px-7 rounded-b-xl">
                 <div>
                   <h1 className="font-med text-2xl">{item.name}</h1>
                 </div>
