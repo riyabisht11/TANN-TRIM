@@ -50,7 +50,7 @@ function Login() {
       </div>
 
       <div className="w-full space-y-10 lg:space-y-12">
-        <div className="flex justify-center py-3 lg:py-5 border rounded-xl  ">
+        <div className="flex justify-center py-3 lg:py-5 border rounded-xl cursor-pointer ">
           <button className="font-roboto text-base font-medium text-white">
             Log In
           </button>
@@ -58,16 +58,16 @@ function Login() {
         <div className="flex justify-center">
           <h1 className="font-roboto text-base font-medium text-white ">Or</h1>
         </div>
-        <div className="flex justify-center py-3 lg:py-5 border rounded-xl w-full ">
+        <div className="flex justify-center py-3 lg:py-5 border rounded-xl w-full cursor-pointer">
           <button className="font-roboto text-base font-medium text-white">
-            <div className="flex gap-5">
+            <div className="flex gap-5 ">
               <img src={facebook} alt="" />
               <h1>Login with Facebook</h1>
             </div>
           </button>
         </div>
 
-        <div className="flex justify-center py-3 lg:py-5 border rounded-xl w-full ">
+        <div className="flex justify-center py-3 lg:py-5 border rounded-xl w-full cursor-pointer">
           <button className="font-roboto text-base font-medium text-white">
             <div className="flex gap-5">
               <img src={google} alt="" />

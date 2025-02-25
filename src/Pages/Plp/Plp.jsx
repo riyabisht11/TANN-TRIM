@@ -130,21 +130,20 @@ function Plp() {
 
   // State to track if a card is hovered
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [showPopup, setShowPopup] = useState(false); 
+  const [showPopup, setShowPopup] = useState(false);
   const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {
-    console.log(item)
-    dispatch(addToCart(item))
+    console.log(item);
+    dispatch(addToCart(item));
 
     setShowPopup(true);
 
     // Hide popup after 2.5 seconds
     setTimeout(() => {
       setShowPopup(false);
-    }, 2500);;
+    }, 2500);
   };
-
 
   return (
     <div className="max-w-screen-2xl mx-auto px-5 md:px-16 py-10 md:py-16">
@@ -157,7 +156,7 @@ function Plp() {
       {/* Popup Notification */}
       {showPopup && (
         <div className="fixed top-5 right-5 z-50 bg-[#444C40] font-book text-white px-6 py-3 rounded-md shadow-lg animate-fadeInOut">
-           ✔ Item Added to Cart!
+          ✔ Item Added to Cart!
         </div>
       )}
 
@@ -171,8 +170,6 @@ function Plp() {
             className="relative mx-auto"
           >
             <div
-              
-             
               className={`card pt-10 border rounded-xl border-[#D1D1D1] inline-block shadow-md 
                 transition duration-300 ease-in-out ${
                   hoveredIndex !== null
@@ -182,7 +179,6 @@ function Plp() {
                     : "!blur-none"
                 }`} // Apply blur to other cards on hover
             >
-             
               <div className="relative group">
                 <Link to="/pdp">
                   <button
@@ -197,25 +193,37 @@ function Plp() {
                 <img src={product} alt="Bag" className="w-full" />
               </div>
 
-              <div onClick={() => handleAddToCart(item)} className="bg-[#444C40] space-y-4 text-white py-5 px-7 rounded-b-xl">
-                <div>
-                  <h1 className="font-med text-2xl">{item.name}</h1>
-                </div>
-                <div>
-                  <h1 className="font-book text-base font-normal">
-                    {item.description}
-                  </h1>
-                </div>
-                <div className="flex gap-5 font-normal text-sm lg:text-base">
-                  <h1 className="text-base md:text-xl lg:text-2xl whitespace-nowrap font-med">
-                    ₹ {item.discountedPrice}
-                  </h1>
-                  <h1 className="opacity-30 line-through whitespace-nowrap font-book">
-                    ₹ {item.price}
-                  </h1>
-                  <h1 className="whitespace-nowrap font-med">
-                    ({item.discountPercent} % OFF)
-                  </h1>
+              <div className="relative group">
+                <div className="bg-[#444C40] space-y-4 text-white py-5 px-7 rounded-b-xl relative overflow-hidden">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent unwanted event bubbling
+                      handleAddToCart(item); // Add item to cart
+                    }}
+                    className="absolute inset-0 w-[150px] h-[50px] bg-white text-[#444C40] font-med transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 flex items-center justify-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  rounded-lg cursor-pointer"
+                  >
+                    BUY NOW
+                  </button>
+
+                  <div>
+                    <h1 className="font-med text-2xl">{item.name}</h1>
+                  </div>
+                  <div>
+                    <h1 className="font-book text-base font-normal">
+                      {item.description}
+                    </h1>
+                  </div>
+                  <div className="flex gap-5 font-normal text-sm lg:text-base">
+                    <h1 className="text-base md:text-xl lg:text-2xl whitespace-nowrap font-med">
+                      ₹ {item.discountedPrice}
+                    </h1>
+                    <h1 className="opacity-30 line-through whitespace-nowrap font-book">
+                      ₹ {item.price}
+                    </h1>
+                    <h1 className="whitespace-nowrap font-med">
+                      ({item.discountPercent} % OFF)
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>

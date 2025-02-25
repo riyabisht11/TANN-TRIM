@@ -8,6 +8,7 @@ import Checkout from "../Pages/Checkout/Checkout";
 import Forgotpassword from "../Pages/Home/Forgotpassword";
 import Forgotlink from "../Pages/Home/Forgotlink";
 import Orderplaced from "../Components/Topmenu/Orderplaced";
+import Cart from "../Components/Topmenu/Cart";
 
 function Router() {
 
@@ -22,6 +23,7 @@ function Router() {
         
       ],
     },
+    { path: "/cart", element:<Cart/>},
     { path: "/checkout", element:<Checkout/> },
     { path: "/forgotpassword", element:<Forgotpassword/> },
     { path: "/forgotlink", element:<Forgotlink/> },

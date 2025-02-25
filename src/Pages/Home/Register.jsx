@@ -79,7 +79,7 @@ function Register({ functionality, open }) {
             </div>
           </form>
 
-          <div className="flex justify-center py-5 border rounded-xl w-full ">
+          <div className="flex justify-center py-5 border rounded-xl w-full cursor-pointer ">
             <button className="font-roboto text-base font-medium text-white">
               Register
             </button>

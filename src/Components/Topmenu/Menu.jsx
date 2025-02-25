@@ -3,9 +3,13 @@ import logo from "../../assets/SVG/whitelogo.svg";
 import cart from "../../assets/SVG/whitecart.svg";
 import cross from "../../assets/SVG/whitecross.svg";
 import searchicon from "../../assets/SVG/searchicon.svg";
+import { useSelector } from "react-redux";
 
 
 function Menu({ functionality, open }) {
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
     const [showMenu, setshowMenu] = useState(true);
   return (
     <main className={`bg-[#444C40] h-screen w-full  ${
@@ -46,7 +50,8 @@ function Menu({ functionality, open }) {
               Register / Log In
             </h1>
           </div>
-          <div className="cart px-[61px]">
+          <div className="cart px-[61px] relative">
+          <div className="absolute bg-white text-[#444C40] rounded-full size-4 text-xs flex justify-center items-center -top-1 right-14 ">{totalQuantity}</div>
             <img src={cart} alt="" />
           </div>
         </div>
