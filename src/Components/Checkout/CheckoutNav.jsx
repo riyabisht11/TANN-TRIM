@@ -6,10 +6,10 @@ import { Link } from "react-router";
 function CheckoutNav() {
   return (
     <div className="shadow-md w-full h-full">
-    <nav className="max-w-screen-2xl mx-auto py-6 px-5 md:px-16 overflow-hidden shadow-md">
+    <nav className="max-w-screen-2xl mx-auto py-6 px-5 md:px-16 overflow-hidden">
       <div className="navcontent flex  relative flex-col md:flex-row gap-4">
         <div className="menu flex gap-6 ">
-          <Link to="/">
+          <Link to="/plp">
             <img src={arrowlogo} alt="" className="" />
           </Link>
           <h1 className="font-med text-sm md:text-base font-semibold  text-[#444C40]">

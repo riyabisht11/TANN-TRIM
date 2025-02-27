@@ -26,7 +26,7 @@ function Orderplaced() {
       </div>
       
       <div className="flex justify-center py-5 rounded-xl w-full relative bg-white/5 cursor-pointer">
-      <Link to ="/">
+      <Link to ="/plp">
         <button className="font-roboto text-base font-medium text-white  z-50 opacity-100">
         Continue Shopping
         </button>

@@ -4,6 +4,7 @@ import cart from "../../assets/SVG/whitecart.svg";
 import cross from "../../assets/SVG/whitecross.svg";
 import searchicon from "../../assets/SVG/searchicon.svg";
 import { useSelector } from "react-redux";
+import { Link } from "react-router";
 
 
 function Menu({ functionality, open }) {
@@ -45,6 +46,7 @@ function Menu({ functionality, open }) {
         </div>
 
         <div className="two flex gap-15">
+          
           <div className="register">
             <h1 className="font-ave text-base font-normal text-white">
               Register / Log In

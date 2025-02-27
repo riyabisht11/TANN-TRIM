@@ -180,7 +180,7 @@ function Plp() {
                 }`} // Apply blur to other cards on hover
             >
               <div className="relative group">
-                <Link to="/pdp">
+                <Link to={`/pdp/${item.id}`} >
                   <button
                     onClick={() =>
                       window.scrollTo({ top: 0, behavior: "instant" })
@@ -197,7 +197,7 @@ function Plp() {
                 <div className="bg-[#444C40] space-y-4 text-white py-5 px-7 rounded-b-xl relative overflow-hidden">
                   <button
                     onClick={(e) => {
-                      e.stopPropagation(); // Prevent unwanted event bubbling
+                 
                       handleAddToCart(item); // Add item to cart
                     }}
                     className="absolute inset-0 w-[150px] h-[50px] bg-white text-[#444C40] font-med transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 flex items-center justify-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  rounded-lg cursor-pointer"

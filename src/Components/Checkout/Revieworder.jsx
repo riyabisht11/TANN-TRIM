@@ -29,10 +29,10 @@ function Revieworder() {
               <div className="pr-6 space-y-6">
                 <div className="font-book text-[#444C40]">
                   <h1 className="font-normal text-base">
-                    Lightweight Bag with Pockets
+                    {item.name}
                   </h1>
-                  <h1 className="font-light text-xs">Color : Olive Green</h1>
-                  <h1 className="font-light text-xs">Finish: leather</h1>
+                  <h1 className="font-light text-xs">Color : {item.color}</h1>
+                  <h1 className="font-light text-xs">Finish: {item.finish}</h1>
                 </div>
                 <div className="flex justify-between">
                   <div className="flex space-x-3">

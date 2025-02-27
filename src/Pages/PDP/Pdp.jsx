@@ -9,10 +9,20 @@ import product1 from "../../assets/Images/Product 1.png";
 import Features from "../../Components/Home/Pdp components/Features";
 import Similarproduct from "../../Components/Home/Pdp components/Similarproduct";
 import Customerliked from "../../Components/Home/Pdp components/Customerliked";
-import { Link } from "react-router";
+import { Link, useLocation, useParams } from "react-router";
 import video from "../../assets/Videos/productvideo.mp4";
+import { useDispatch } from "react-redux";
+import { PLP } from "../../Utils/Productlist";
+import { addToCart } from "../../Slices/cartSlice";
 
-function Pdp() {
+function Pdp({ array }) {
+  const { id } = useParams();
+  console.log(id);
+  const bag = array.find((item) => item.id === parseInt(id));
+  if (!bag) {
+    return <div>Product not found.</div>;
+  }
+
   const circle = [
     { outer: "border-[#444C40]", inner: "bg-[#444C40]" },
     { outer: "border-[#A16B1A]", inner: "bg-[#A16B1A]" },
@@ -42,6 +52,22 @@ function Pdp() {
     }
   };
 
+  const dispatch = useDispatch();
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleAddToCart = (item) => {
+    console.log(item);
+    dispatch(addToCart(item));
+
+    setShowPopup(true);
+
+    // Hide popup after 2.5 seconds
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 2500);
+  };
+  
+
   return (
     <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-12 overflow-x-hidden">
       <main>
@@ -62,11 +88,11 @@ function Pdp() {
 
           <div className="right w-auto lg:w-1/3 pt-13 md:pt-28 lg:pt-52 space-y-7 md:space-y-14 self-start">
             <div>
-              <h1 className="font-med font-semibold text-xl md:text-2xl lg:text-3xl max-w-43 md:max-w-96">
-                LIGHTWEIGHT BAG WITH POCKETS
+              <h1 className="font-med font-semibold text-2xl md:text-3xl lg:text-5xl max-w-43 md:max-w-96">
+                {bag.name}
               </h1>
               <h1 className="font-book font-normal text-lg md:text-xl lg:text-3xl text-[#444C40] pt-2 md:pt-5">
-                ₹ 3,570.00
+                ₹ {bag.discountedPrice}
               </h1>
               <h1 className="font-med font-semibold text-[9px] lg:text-xs">
                 inclusive of all taxes
@@ -113,14 +139,25 @@ function Pdp() {
                 ))}
               </div>
               <div>
-                <Link to="/checkout" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  <div className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4 hover:brightness-125 duration-500 transition-all">
-                    <img src={cart} alt="" />
-                    <button className="font-roboto font-normal text-lg lg:text-xl text-white">
-                      ADD TO BAG
-                    </button>
+
+                {showPopup && (
+                  <div className="fixed top-5 right-5 z-50 bg-[#444C40] font-book text-white px-6 py-3 rounded-md shadow-lg animate-fadeInOut">
+                    ✔ Item Added to Cart!
                   </div>
-                </Link>
+                )}
+
+                <div
+                  onClick={(e) => {
+               
+                    handleAddToCart(bag); // Add item to cart
+                  }}
+                  className="cartbutton flex bg-[#444C40] gap-3 md:gap-5 rounded-xl justify-center py-4 hover:brightness-125 duration-500 transition-all"
+                >
+                  <img src={cart} alt="" />
+                  <button className="font-roboto font-normal text-lg lg:text-xl text-white">
+                    ADD TO BAG
+                  </button>
+                </div>
               </div>
             </div>
           </div>

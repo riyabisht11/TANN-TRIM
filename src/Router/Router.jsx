@@ -9,31 +9,27 @@ import Forgotpassword from "../Pages/Home/Forgotpassword";
 import Forgotlink from "../Pages/Home/Forgotlink";
 import Orderplaced from "../Components/Topmenu/Orderplaced";
 import Cart from "../Components/Topmenu/Cart";
+import { PLP } from "../Utils/Productlist";
 
 function Router() {
-
   const appRouter = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
       children: [
         { path: "/", element: <Home /> },
-        { path: "/pdp", element: <Pdp /> },
-        { path: "/plp", element: <Plp/> },
-        
+        { path: "/pdp/:id", element: <Pdp array={PLP} /> },
+        { path: "/plp", element: <Plp /> },
       ],
     },
-    { path: "/cart", element:<Cart/>},
-    { path: "/checkout", element:<Checkout/> },
-    { path: "/forgotpassword", element:<Forgotpassword/> },
-    { path: "/forgotlink", element:<Forgotlink/> },
-    { path: "/orderplaced", element:<Orderplaced/>},
-   
-
+    { path: "/cart", element: <Cart /> },
+    { path: "/checkout", element: <Checkout /> },
+    { path: "/forgotpassword", element: <Forgotpassword /> },
+    { path: "/forgotlink", element: <Forgotlink /> },
+    { path: "/orderplaced", element: <Orderplaced /> },
   ]);
 
   return <RouterProvider router={appRouter} />;
-
 }
 
 export default Router;

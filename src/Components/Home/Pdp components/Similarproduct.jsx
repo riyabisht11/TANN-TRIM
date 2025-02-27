@@ -17,7 +17,7 @@ function Similarproduct() {
         <h1 className="font-med text-2xl font-semibold">SIMILAR PRODUCTS</h1>
       </div>
 
-      <div className="flex  pt-10 items-center relative">
+      <div className=" pt-10 items-center relative ">
         <div className="swiper-next bg-[#444C40] rounded-lg size-10 shrink-0 cursor-pointer absolute right-0 top-2/3 -translate-y-1/2">
           <img src={arrow} alt="" className="px-4 py-3" />
         </div>
