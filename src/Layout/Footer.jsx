@@ -47,7 +47,7 @@ function Footer() {
           </div>
           <div className="icons flex justify-between space-x-4 md:space-x-8 ">
             {social.map((item, idx) => (
-              <div className="size-10 bg-white rounded-lg flex justify-center items-center">
+              <div className="size-10 bg-white rounded-lg flex justify-center items-center hover:bg-opacity-80">
                 <img src={item.img} alt="" className=" " />
               </div>
             ))}

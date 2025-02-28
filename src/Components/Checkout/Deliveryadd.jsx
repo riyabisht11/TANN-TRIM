@@ -13,7 +13,10 @@ function Deliveryadd() {
     { name: "Country", type: "text", id: "text" },
   ];
   return (
-    <div className="shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)]  rounded-xl inline-block  overflow-hidden">
+    <div
+      id="delivery-address"
+      className="shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)]  rounded-xl inline-block  overflow-hidden"
+    >
       <div className="py-8 px-6 md:px-12">
         <div>
           <h1 className=" font-med text-2xl text-[#444C40] font-semibold">
@@ -59,7 +62,14 @@ function Deliveryadd() {
           </label>
         </div>
       </div>
-      <div className="bg-[#444C40] flex justify-center hover:brightness-125 duration-500 transition-all">
+      <div
+        onClick={() => {
+          document.getElementById("payment-method")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
+        className="bg-[#444C40] flex justify-center hover:brightness-125 duration-500 transition-all"
+      >
         <button className="text-white font-med text-base font-semibold py-5 ">
           CONTINUE TO PAYMENT
         </button>

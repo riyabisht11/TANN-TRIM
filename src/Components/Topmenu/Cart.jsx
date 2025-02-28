@@ -116,7 +116,7 @@ function Cart({ functionality, open }) {
 
       {/* Checkout Button */}
       {cartItems.length > 0 && (
-        <div className="bg-[#444C40] flex justify-center">
+        <div className="bg-[#444C40] flex justify-center sticky bottom-0">
           <Link
             to="/checkout"
             onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}

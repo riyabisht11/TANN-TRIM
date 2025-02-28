@@ -11,7 +11,7 @@ function Paymentmethod() {
     { img: paytm, name: "Paytm", img1: blackarrow },
   ];
   return (
-    <div className="shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)]  rounded-xl inline-block  overflow-hidden ">
+    <div id="payment-method" className="shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)]  rounded-xl inline-block  overflow-hidden ">
       <main className="px-6 md:px-12 py-7 space-y-12">
         <div className="">
           <h1 className="text-2xl font-semibold text-[#444C40] font-med">
