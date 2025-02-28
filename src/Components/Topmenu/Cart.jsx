@@ -53,7 +53,7 @@ function Cart({ functionality, open }) {
           </div>
           </div>
         ) : (
-          <main className="space-y-5 lg:space-y-7 flex-grow max-h-[40vh] overflow-y-auto">
+          <main className="space-y-5 lg:space-y-7 flex-grow max-h-[300px] overflow-y-auto">
             {cartItems.map((item, idx) => (
               <div key={item.id} className="item flex flex-col xl:flex-row border p-2 md:p-3 rounded-xl relative items-center xl:items-start">
                 <div>
