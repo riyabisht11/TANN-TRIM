@@ -58,7 +58,7 @@ function Revieworder() {
                     </div>
                   </div>
 
-                  <div className="relative left-5 whitespace-nowrap">
+                  <div className="relative left-6 xl:left-16 whitespace-nowrap">
                     <h1 className=" font-ave text-[#444C40] text-base font-semibold">
                       ₹{" "}
                       {parseFloat(item.discountedPrice.replace(/[^\d.]/g, "")) *
@@ -81,7 +81,7 @@ function Revieworder() {
           <h1 className="font-med text-[#444C40] text-base font-semibold">
             Subtotal
           </h1>
-          <h1 className="font-med text-[#444C40] text-base font-normal">
+          <h1 className="font-med text-[#444C40] text-base font-normal whitespace-nowrap ">
             ₹ {totalAmount.toFixed(2)}
           </h1>
         </div>

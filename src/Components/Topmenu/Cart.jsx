@@ -41,7 +41,7 @@ function Cart({ functionality, open }) {
         {cartItems.length === 0 ? (
           <div className="flex ">
           <div className="flex flex-col items-center justify-center  pt-28 space-y-5">
-            <h2 className="font-book text-3xl font-semibold text-gray-600">
+            <h2 className="font-book text-2xl md:text-3xl font-semibold text-gray-600">
               Your Tanntrim Cart is Empty.
             </h2>
             <Link
@@ -54,7 +54,7 @@ function Cart({ functionality, open }) {
           </div>
           </div>
         ) : (
-          <main className="space-y-5 lg:space-y-7 flex-grow max-h-[300px] overflow-y-auto">
+          <main className="space-y-5 lg:space-y-7 flex-grow max-h-[250px] md:max-h-[300px] overflow-y-auto">
             {cartItems.map((item, idx) => (
               <div key={item.id} className="item flex flex-col xl:flex-row border p-2 md:p-3 rounded-xl relative items-center xl:items-start">
                 <div>
@@ -68,7 +68,7 @@ function Cart({ functionality, open }) {
                     <h1 className="font-light text-xs">Color: {item.color}</h1>
                     <h1 className="font-light text-xs">Finish: {item.finish}</h1>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between ">
                     <div className="flex space-x-3">
                       <div   onClick={() => dispatch(decreaseQuantity(item.id))} className="decrease rounded-full size-6 bg-[#444C40] flex justify-center items-center cursor-pointer">
                         <img src={minus} alt="" />
