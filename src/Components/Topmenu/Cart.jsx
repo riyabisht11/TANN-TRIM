@@ -25,23 +25,24 @@ function Cart({ functionality, open }) {
       className={`shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)] flex flex-col justify-between rounded-xl max-w-lg h-[80vh] md:h-[656px] overflow-y-auto xl:overflow-hidden space-y-10 fixed right-0 lg:right-16 lg:top-20 z-[999] bg-white`}
     >
       <main className="pt-8 px-6 md:px-12 card inline-flex flex-col space-y-8 lg:space-y-12">
-        <div className="flex border-b-2 border-[#E7E7E7] pb-3 md:pb-5 space-x-16 sticky top-0 bg-white z-10">
+        <div className="flex  border-b-2 border-[#E7E7E7] pb-3 md:pb-5 space-x-16 sticky top-0 bg-white z-10">
           <h1 className="font-med text-sm md:text-xl xl:text-2xl font-semibold text-[#444C40] whitespace-nowrap">
             Your Shopping Bag ({totalQuantity} Items)
           </h1>
-          <img
-            className="cursor-pointer"
-            onClick={functionality}
-            src={blackcross}
-            alt=""
-          />
+          <div 
+  className="absolute top-0 right-1 sm:top-2 sm:right-3 md:top-1 md:right-0 lg:top-0 lg:right-0 cursor-pointer"
+  onClick={functionality}
+>
+  <img src={blackcross} alt="Close" className="size-5 sm:size-6 md:size-7 lg:size-8" />
+</div>
+
         </div>
 
         {/* Show this when the cart is empty */}
         {cartItems.length === 0 ? (
           <div className="flex ">
           <div className="flex flex-col items-center justify-center  pt-28 space-y-5">
-            <h2 className="font-book text-2xl md:text-3xl font-semibold text-gray-600">
+            <h2 className="font-book text-xl md:text-3xl font-semibold text-gray-600">
               Your Tanntrim Cart is Empty.
             </h2>
             <Link
