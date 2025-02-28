@@ -46,6 +46,7 @@ function Cart({ functionality, open }) {
             </h2>
             <Link
               to="/plp"
+              onClick={functionality}
               className="font-book bg-[#444C40] text-white px-6 py-2 rounded-lg"
             >
               Continue Shopping
