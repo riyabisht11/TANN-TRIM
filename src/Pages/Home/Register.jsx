@@ -45,7 +45,7 @@ function Register({ functionality, open }) {
         </div>
       </div>
       {showRegister ? (
-        <div className="flex flex-col space-y-12 justify-center items-center max-w-lg lg:w-[500px] mx-auto py-10  lg:absolute lg:left-1/2 lg:-translate-x-1/2  lg:top-1/2 lg:-translate-y-1/2">
+        <div className="flex flex-col space-y-12 justify-center items-center max-w-lg lg:w-[500px] mx-auto py-10  md:absolute md:left-1/2 md:-translate-x-1/2  md:top-2 lg:top-1/2 lg:-translate-y-1/2">
           <div className="space-y-12 ">
             <img src={register} alt="" />
             <h1 className="text-white font-med text-2xl font-semibold">
@@ -53,7 +53,7 @@ function Register({ functionality, open }) {
             </h1>
           </div>
          <form action="" className="w-full">
-            <div className="flex flex-col gap-12 w-full justify-center">
+            <div className="flex flex-col gap-8 lg:gap-12 w-full justify-center">
               <input
                 type="text"
                 placeholder="Full Name"

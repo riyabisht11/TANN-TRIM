@@ -7,7 +7,8 @@ import { Link } from "react-router";
 
 function Login() {
   return (
-    <div className="flex flex-col space-y-12 justify-center items-center max-w-lg mx-auto py-10 bg-[#444C40]">
+    <div className="flex flex-col space-y-12 justify-center items-center max-w-lg lg:w-[500px] mx-auto py-10 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-2 lg:top-1/2 lg:-translate-y-1/2 bg-[#444C40]">
+
       <div className="space-y-12 ">
         <img src={loginlogo} alt="" />
         <h1 className="text-white font-med text-2xl font-semibold">Log In</h1>
@@ -27,7 +28,7 @@ function Login() {
         </div>
       </form>
 
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full gap-8">
         <div className="flex gap-1 items-center">
 
           <label className="flex items-center space-x-2 cursor-pointer">
@@ -49,7 +50,7 @@ function Login() {
         </div>
       </div>
 
-      <div className="w-full space-y-10 lg:space-y-12">
+      <div className="w-full space-y-5 lg:space-y-12">
         <div className="flex justify-center py-3 lg:py-5 border rounded-xl cursor-pointer ">
           <button className="font-roboto text-base font-medium text-white">
             Log In
@@ -61,8 +62,8 @@ function Login() {
         <div className="flex justify-center py-3 lg:py-5 border rounded-xl w-full cursor-pointer">
           <button className="font-roboto text-base font-medium text-white">
             <div className="flex gap-5 ">
-              <img src={facebook} alt="" />
-              <h1>Login with Facebook</h1>
+              <img src={facebook} alt="" className=" md:size-4" />
+              <h1 className="md:text-sm">Login with Facebook</h1>
             </div>
           </button>
         </div>
@@ -70,8 +71,8 @@ function Login() {
         <div className="flex justify-center py-3 lg:py-5 border rounded-xl w-full cursor-pointer">
           <button className="font-roboto text-base font-medium text-white">
             <div className="flex gap-5">
-              <img src={google} alt="" />
-              <h1>Login with Google</h1>
+              <img src={google} alt="" className=" md:size-4"/>
+              <h1 className="md:text-sm">Login with Google</h1>
             </div>
           </button>
         </div>

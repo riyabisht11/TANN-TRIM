@@ -71,7 +71,7 @@ function Pdp({ array }) {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 sm:px-16 py-8 sm:py-12 overflow-x-hidden">
       <main>
-        <div className="flex flex-col lg:flex-row gap-5 md:gap-24 lg:gap-14 items-center lg:items-start">
+        <div className="flex flex-col lg:flex-row gap-5 md:gap-0 lg:gap-14 items-center lg:items-start">
           <div className="left w-auto md:w-2/3 flex flex-col items-center ">
             <div>
               <img src={image1} alt="" />
@@ -86,7 +86,7 @@ function Pdp({ array }) {
             </div>
           </div>
 
-          <div className="right w-auto lg:w-1/3 pt-13 md:pt-28 lg:pt-52 space-y-7 md:space-y-14 self-start">
+          <div className="right w-auto lg:w-1/3 pt-13 md:pt-14 lg:pt-52 space-y-7 md:space-y-14 self-start">
             <div>
               <h1 className="font-med font-semibold text-2xl md:text-3xl lg:text-5xl max-w-43 md:max-w-96">
                 {bag.name}
