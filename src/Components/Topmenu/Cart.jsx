@@ -108,9 +108,9 @@ function Cart({ functionality, open }) {
               <h1>Subtotal</h1>
             </div>
             <div className="flex flex-col space-y-2 font-med text-xs lg:text-base text-[#444C40] pl-8">
-              <h1>₹ {totalAmount}.00</h1>
+            <h1>₹ {totalAmount.toLocaleString("en-IN")}.00</h1>
               <h1>Free</h1>
-              <h1>₹ {totalAmount}.00</h1>
+              <h1>₹ {totalAmount.toLocaleString("en-IN")}.00</h1>
             </div>
           </div>
         )}

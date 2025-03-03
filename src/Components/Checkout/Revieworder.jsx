@@ -61,8 +61,11 @@ function Revieworder() {
                   <div className="relative left-6 xl:left-16 whitespace-nowrap">
                     <h1 className=" font-ave text-[#444C40] text-base font-semibold">
                       ₹{" "}
-                      {parseFloat(item.discountedPrice.replace(/[^\d.]/g, "")) *
-                        item.quantity}
+                      {(
+                        parseFloat(
+                          item.discountedPrice.replace(/[^\d.]/g, "")
+                        ) * item.quantity
+                      ).toLocaleString("en-IN")}
                     </h1>
                   </div>
                 </div>
@@ -82,7 +85,7 @@ function Revieworder() {
             Subtotal
           </h1>
           <h1 className="font-med text-[#444C40] text-base font-normal whitespace-nowrap ">
-            ₹ {totalAmount.toFixed(2)}
+            ₹ {totalAmount.toLocaleString("en-IN")}
           </h1>
         </div>
       </main>
