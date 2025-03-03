@@ -22,19 +22,19 @@ function Cart({ functionality, open }) {
   return (
     <div className=" min-h-screen mx-auto fixed backdrop-blur-sm inset-0 w-full z-[999] max-w-screen-2xl px-16">
     <div
-      className={`shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)] flex flex-col justify-between rounded-xl max-w-lg h-[80vh] md:h-[656px] overflow-y-auto xl:overflow-hidden space-y-10 fixed right-0 lg:right-16 lg:top-20 z-[999] bg-white`}
+      className={`shadow-[0px_0px_26px_5px_rgba(0,_0,_0,_0.1)] flex flex-col justify-between rounded-xl max-w-lg h-[530px] md:h-[600px] lg:h-[656px] overflow-y-auto xl:overflow-hidden space-y-10 fixed right-0 lg:right-16 lg:top-20 z-[999] bg-white`}
     >
       <main className="pt-8 px-6 md:px-12 card inline-flex flex-col space-y-8 lg:space-y-12">
         <div className="flex  border-b-2 border-[#E7E7E7] pb-3 md:pb-5 space-x-16 sticky top-0 bg-white z-10">
           <h1 className="font-med text-sm md:text-xl xl:text-2xl font-semibold text-[#444C40] whitespace-nowrap">
             Your Shopping Bag ({totalQuantity} Items)
           </h1>
-          <div 
-  className="absolute top-0 right-1 sm:top-2 sm:right-3 md:top-1 md:right-0 lg:top-0 lg:right-0 cursor-pointer"
-  onClick={functionality}
->
-  <img src={blackcross} alt="Close" className="size-5 sm:size-6 md:size-7 lg:size-8" />
-</div>
+          <img
+            className="cursor-pointer"
+            onClick={functionality}
+            src={blackcross}
+            alt=""
+          />
 
         </div>
 
