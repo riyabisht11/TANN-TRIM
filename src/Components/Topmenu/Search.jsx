@@ -8,6 +8,7 @@ import searchicon from "../../assets/SVG/searchicon.svg";
 import { useSelector } from "react-redux";
 import Register from "../../Pages/Home/Register";
 import Menu from "./Menu";
+import Cart from "./Cart";
 
 function Search({ functionality, open }) {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -32,6 +33,10 @@ function Search({ functionality, open }) {
     setActivePage("search");
   };
 
+  const openCart = () => {
+    setActivePage("cart");
+  };
+
   useEffect(() => {
     if (activePage !== "search") {
       document.body.style.overflow = "hidden";
@@ -50,6 +55,7 @@ function Search({ functionality, open }) {
       
       {/* Render Menu page */}
       {activePage === "menu" && <Menu functionality={closeAll} open={true} />}
+      {activePage === "cart" && <Cart functionality={closeAll} open={true} />}
 
 
       {activePage === "search" && (<main
@@ -97,7 +103,7 @@ function Search({ functionality, open }) {
                   Register / Log In
                 </h1>
               </div>
-              <div className="cart px-[61px] relative">
+              <div onClick={openCart} className="cart px-[61px] relative">
                 <div className="absolute bg-white text-[#444C40] rounded-full size-4 text-xs flex justify-center items-center -top-1 right-14 ">
                   {totalQuantity}
                 </div>

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Revieworder from "../../Components/Checkout/Revieworder";
 import Paymentmethod from "../../Components/Checkout/Paymentmethod";
 import Deliveryadd from "../../Components/Checkout/Deliveryadd";
 import Ordersummary from "../../Components/Checkout/Ordersummary";
 import CheckoutNav from "../../Components/Checkout/CheckoutNav";
 import Footer from "../../Layout/Footer";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 function Checkout() {
   return (
@@ -26,19 +26,17 @@ function Checkout() {
             <Paymentmethod />
             <Ordersummary />
 
-            <Link to ="/orderplaced">
-            <div className="bg-[#444C40] flex justify-center rounded-xl mb-5 hover:brightness-125 duration-500 transition-all">
-            
-              <button className="text-white font-roboto text-lg md:text-xl font-normal py-4 ">
-              COMPLETE ORDER
-              </button>
-            </div>
+            <Link to="/orderplaced">
+              <div className="bg-[#444C40] flex justify-center rounded-xl mb-5 hover:brightness-125 duration-500 transition-all">
+                <button className="text-white font-roboto text-lg md:text-xl font-normal py-4 ">
+                  COMPLETE ORDER
+                </button>
+              </div>
             </Link>
-            
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

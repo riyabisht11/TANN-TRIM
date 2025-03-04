@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router";
 import Register from "../../Pages/Home/Register";
 import Search from "./Search";
+import Cart from "./Cart";
+
 
 function Menu({ functionality, open }) {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -52,6 +54,10 @@ function Menu({ functionality, open }) {
     setActivePage("menu");
   };
 
+  const openCart = () => {
+    setActivePage("cart");
+  };
+
   useEffect(() => {
     if (activePage !== "menu") {
       document.body.style.overflow = "hidden";
@@ -78,6 +84,8 @@ function Menu({ functionality, open }) {
       )} */}
       {activePage === "register" && <Register functionality={closeAll} open={true} />}
       {activePage === "search" && <Search functionality={closeAll} open={true} />}
+      {activePage === "cart" && <Cart functionality={closeAll} open={true} />}
+  
 
       {activePage === "menu" && (<main
         className={`bg-[#444C40] h-screen w-full  ${
@@ -119,7 +127,7 @@ function Menu({ functionality, open }) {
                   Register / Log In
                 </h1>
               </div>
-              <div className="cart px-[61px] relative">
+              <div  onClick={openCart} className="cart px-[61px] relative">
                 <div className="absolute bg-white text-[#444C40] rounded-full size-4 text-xs flex justify-center items-center -top-1 right-14 ">
                   {totalQuantity}
                 </div>

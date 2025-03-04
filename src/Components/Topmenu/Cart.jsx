@@ -5,7 +5,7 @@ import minus from "../../assets/SVG/minus.svg";
 import one from "../../assets/SVG/1.svg";
 import add from "../../assets/SVG/increase.svg";
 import whitecross from "../../assets/SVG/whitecross.svg";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { decreaseQuantity, increaseQuantity, removeFromCart } from "../../Slices/cartSlice";
 
@@ -17,8 +17,42 @@ function Cart({ functionality, open }) {
   const dispatch = useDispatch();
   const totalAmount=useSelector((state) => state.cart.totalAmount);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  
 
+
+  // const navigate = useNavigate();
+  // const [isAuthenticated, setIsAuthenticated] = useState(null);
+
+  // useEffect(() => {
+  //   const user = localStorage.getItem("user");
+
+  //   if (!user) {
+  //     alert("Access Denied! Please log in first.");
+  //     navigate("/login"); // Redirect if not logged in
+  //   } else {
+  //     setIsAuthenticated(true); // Allow rendering if authenticated
+  //   }
+  // }, [navigate]);
+
+  // if (isAuthenticated === null) {
+  //   return null; // Prevent rendering checkout page until authentication is verified
+  // }
+    
+  
+  // const navigate = useNavigate(); // Initialize navigation function
+
+  // const handleCheckout = () => {
+  //   const user = JSON.parse(localStorage.getItem("user")); // Check if user is logged in
+
+  //   if (!user) {
+  //     // Show simple alert if not logged in
+  //     alert("Access Denied! Please log in or register to continue with your purchase.");
+  //     return; // Stop function execution
+  //   }
+
+  //   // If logged in, navigate to checkout
+  //   navigate("/checkout");
+  // };
+  
   return (
     <div className=" min-h-screen mx-auto fixed backdrop-blur-sm inset-0 w-full z-[999] max-w-screen-2xl px-16">
     <div

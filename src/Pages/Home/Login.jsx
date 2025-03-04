@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import cross from "../../assets/SVG/whitecross.svg";
 import loginlogo from "../../assets/SVG/login.svg";
 import facebook from "../../assets/SVG/facebookwhite.svg";
@@ -6,6 +6,32 @@ import google from "../../assets/SVG/whitegoogle.svg";
 import { Link } from "react-router";
 
 function Login() {
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
+
+  const handleChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  };
+
+  const handleLogin = () => {
+    const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
+
+    if (!storedUser) {
+      alert("No registered user found! Please register first.");
+      return;
+    }
+
+    if (
+      storedUser.email === credentials.email &&
+      storedUser.password === credentials.password
+    ) {
+      localStorage.setItem("user", JSON.stringify(storedUser)); // Set login session
+      alert("Login successful!");
+      window.location.href = "/checkout"; // Redirect to checkout
+    } else {
+      alert("Invalid email or password! Please try again.");
+    }
+  };
+
   return (
     <div className="flex flex-col space-y-12 justify-center items-center max-w-lg lg:w-[500px] mx-auto py-10 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-2 lg:top-1/2 lg:-translate-y-1/2 bg-[#444C40]">
 
@@ -16,13 +42,19 @@ function Login() {
       <form action="" className="w-full">
         <div className="flex flex-col gap:8 gap-12 w-full">
           <input
-            type="text"
-            placeholder="Full Name"
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={credentials.email}
+            onChange={handleChange}
             className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
           />
           <input
-            type="password"
-            placeholder="Password"
+             type="password"
+             name="password"
+             placeholder="Password"
+             value={credentials.password}
+             onChange={handleChange}
             className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
           />
         </div>
@@ -51,7 +83,7 @@ function Login() {
       </div>
 
       <div className="w-full space-y-5 lg:space-y-12">
-        <div className="flex justify-center py-3 lg:py-5 border rounded-xl cursor-pointer ">
+        <div onClick={handleLogin} className="flex justify-center py-3 lg:py-5 border rounded-xl cursor-pointer ">
           <button className="font-roboto text-base font-medium text-white">
             Log In
           </button>

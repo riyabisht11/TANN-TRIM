@@ -10,6 +10,25 @@ import Login from "./Login";
 function Register({ functionality, open }) {
   const [showRegister, setshowRegister] = useState(true);
 
+  const [user, setUser] = useState({ name: "", email: "", phone: "", password: "" });
+
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleRegister = () => {
+    if (!user.name || !user.email || !user.phone || !user.password) {
+      alert("All fields are required!");
+      return;
+    }
+
+    // Store user data in localStorage
+    localStorage.setItem("registeredUser", JSON.stringify(user));
+    alert("Registration successful! Please log in.");
+    setshowRegister(false); // Switch to login form
+  };
+  
+
 
   return (
     <main className={`bg-[#444C40] h-screen w-full ${
@@ -55,31 +74,41 @@ function Register({ functionality, open }) {
          <form action="" className="w-full">
             <div className="flex flex-col gap-8 lg:gap-12 w-full justify-center">
               <input
+               name="name"
                 type="text"
+                value={user.name}
+                onChange={handleChange}
                 placeholder="Full Name"
                 className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
               <input
+               name="email"
                 type="Email"
+                value={user.email}
+                onChange={handleChange}
                 placeholder="Email Id"
                 className=" text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
               <input
                 type="tel"
-                name=""
-                id=""
+                 name="phone"
                 placeholder="Phone Number "
+                value={user.phone}
+                  onChange={handleChange}
                 className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
               <input
                 type="password"
+                name="password"
                 placeholder="Password"
+                value={user.password}
+                onChange={handleChange}
                 className="text-white focus:outline-none bg-transparent border-b-2 py-2 border-opacity-0 placeholder:font-med opacity-40 text-base font-semibold"
               />
             </div>
           </form>
 
-          <div className="flex justify-center py-5 border rounded-xl w-full cursor-pointer ">
+          <div  onClick={handleRegister} className="flex justify-center py-5 border rounded-xl w-full cursor-pointer ">
             <button className="font-roboto text-base font-medium text-white">
               Register
             </button>
