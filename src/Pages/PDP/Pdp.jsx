@@ -205,7 +205,7 @@ function Pdp({ array }) {
               </div>
             </div>
             <div className="flex gap-1 pl-">
-              <img src={blackarrow} alt="" />
+              <img src={blackarrow} alt="" className="cursor-pointer"/>
               <h1 className="font-ave font-semibold text-base ">
                 Specification
               </h1>

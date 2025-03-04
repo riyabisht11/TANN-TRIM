@@ -51,7 +51,7 @@ function Similarproduct() {
               slidesPerView: 5,
             },
           }}
-          className=" mySwiper  w-[90%] lg:mx-0 flex "
+          className=" mySwiper  w-[90%] mx-6 md:mx-0  flex "
         >
           {Similarproduct.map(() => (
             <SwiperSlide key={Similarproduct.id}>
