@@ -10,6 +10,7 @@ import Forgotlink from "../Pages/Home/Forgotlink";
 import Orderplaced from "../Components/Topmenu/Orderplaced";
 import Cart from "../Components/Topmenu/Cart";
 import { PLP } from "../Utils/Productlist";
+import Register from "../Pages/Home/Register";
 
 function Router() {
   const appRouter = createBrowserRouter([
@@ -27,6 +28,7 @@ function Router() {
     { path: "/forgotpassword", element: <Forgotpassword /> },
     { path: "/forgotlink", element: <Forgotlink /> },
     { path: "/orderplaced", element: <Orderplaced /> },
+    { path: "/register", element: <Register/> },
   ]);
 
   return <RouterProvider router={appRouter} />;
