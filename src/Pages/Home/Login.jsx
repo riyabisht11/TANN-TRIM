@@ -45,7 +45,7 @@ function Login() {
   return (
     <>
       <Register functionality={toggleRegister} open={isRegisterOpen} />
-      <div className="flex flex-col space-y-12 justify-center items-center max-w-lg lg:w-[500px] mx-auto py-10 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-2 lg:top-1/2 lg:-translate-y-1/2 bg-[#444C40]">
+      <div className="flex flex-col space-y-12 justify-center items-center max-w-lg lg:w-[500px] mx-auto py-10 lg:py-20  bg-[#444C40]">
         <div className="space-y-12 ">
           <img src={loginlogo} alt="" />
           <h1 className="text-white font-med text-2xl font-semibold">Log In</h1>

@@ -11,6 +11,7 @@ function Register({ functionality, open }) {
   const [showRegister, setshowRegister] = useState(true);
 
   const [user, setUser] = useState({ name: "", email: "", phone: "", password: "" });
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -24,11 +25,15 @@ function Register({ functionality, open }) {
 
     // Store user data in localStorage
     localStorage.setItem("registeredUser", JSON.stringify(user));
-    alert("Registration successful! Please log in.");
-    setshowRegister(false); // Switch to login form
-  };
-  
+    setShowPopup(true);
+    // Switch to login form
+    setUser({ name: "", email: "", phone: "", password: "" });
 
+    setshowRegister(false); 
+  
+  };
+
+ 
 
   return (
     <main className={`bg-[#444C40] h-screen w-full ${
@@ -118,6 +123,25 @@ function Register({ functionality, open }) {
         <Login />
       )}
     </div>
+
+    {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center z-[1000]">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80">
+            <h2 className="text-xl font-semibold text-gray-900">Registration Successful!</h2>
+            <p className="text-gray-700 mt-2">Please log in to continue.</p>
+            <button
+              onClick={() => {
+                setShowPopup(false);
+                setShowRegister(false);
+              }}
+              className="mt-4 bg-[#444C40] text-white px-4 py-2 rounded-lg hover:bg-[#444C40]"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
     </main>
   );
 }
