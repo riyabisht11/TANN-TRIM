@@ -8,13 +8,22 @@ import Register from "../Pages/Home/Register";
 import Search from "../Components/Topmenu/Search";
 import Menu from "../Components/Topmenu/Menu";
 import Cart from "../Components/Topmenu/Cart";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleRegister } from "../Slices/modalSlice";
 
 function Header() {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const dispatch = useDispatch();
 
   const [user, setUser] = useState(null);
+  const isRegisterOpen = useSelector((state) => state.modal.isRegisterOpen); // ✅ Get Redux state
+  console.log("initial state " + isRegisterOpen);
+
+  const handleRegister = () => {
+    dispatch(toggleRegister());
+    console.log("handleRegister function " + isRegisterOpen);
+  };
 
   useEffect(() => {
     // Check if a user is logged in
@@ -22,7 +31,7 @@ function Header() {
     if (storedUser) {
       setUser(storedUser);
     }
-  }, []);
+  }, [isRegisterOpen]);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -30,10 +39,10 @@ function Header() {
     window.location.reload(); // Refresh page after logout
   };
 
-  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
-  const toggleRegister = () => {
-    setIsRegisterOpen(!isRegisterOpen);
-  };
+  // const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  // const toggleRegister = () => {
+  //   setIsRegisterOpen(!isRegisterOpen);
+  // };
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const toggleSearch = () => {
@@ -69,7 +78,7 @@ function Header() {
 
   return (
     <>
-      <Register functionality={toggleRegister} open={isRegisterOpen} />
+      <Register functionality={handleRegister} open={isRegisterOpen} />
       <Search functionality={toggleSearch} open={isSearchOpen} />
       <Menu functionality={toggleMenu} open={isMenuOpen} />
       {isCartOpen && <Cart functionality={toggleCart} />}
@@ -108,7 +117,7 @@ function Header() {
                 // If user is logged in, show email and logout button
                 <div className="flex items-center gap-4">
                   <span className="font-ave text-sm lg:text-base font-semibold whitespace-nowrap text-[#444C40]">
-                    {user.email}
+                    {user.name}
                   </span>
                   <button
                     onClick={handleLogout}
@@ -120,7 +129,7 @@ function Header() {
               ) : (
                 // If not logged in, show Register / Log In
                 <div
-                  onClick={toggleRegister}
+                  onClick={handleRegister}
                   className="register cursor-pointer"
                 >
                   <h1 className="font-ave text-xs lg:text-base font-normal whitespace-nowrap">

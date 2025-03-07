@@ -126,7 +126,7 @@ function Login() {
         </div>
 
         {isModalOpen && (
-          <div className="fixed flex justify-center items-center">
+          <div className="fixed  inset-0 flex justify-center items-center ">
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <h2 className="text-xl font-ave font-bold mb-4">
                 Login Successful!

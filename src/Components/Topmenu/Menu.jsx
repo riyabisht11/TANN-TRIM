@@ -16,6 +16,24 @@ function Menu({ functionality, open }) {
 
   const [showMenu, setshowMenu] = useState(true);
 
+   const [user, setUser] = useState(null);
+  
+    useEffect(() => {
+      // Check if a user is logged in
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+      if (storedUser) {
+        setUser(storedUser);
+      }
+    }, []);
+
+    const handleLogout = () => {
+      localStorage.removeItem("user");
+      setUser(null);
+      window.location.reload(); // Refresh page after logout
+    };
+  
+  
+
   // const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
   // const toggleRegister = () => {
@@ -99,14 +117,14 @@ function Menu({ functionality, open }) {
             <div className="one flex gap-15 items-end">
               <div className="menu flex gap-6 pr-24 items-end">
                 <div onClick={functionality} className="cursor-pointer">
-                  <img src={cross} alt="" className="mb-1" />
+                  <img src={cross} alt="" className="mb-1 "  />
                 </div>
 
-                <h1 className="font-ave text-base font-normal leading-none text-white">
+                <h1 className="font-ave text-xl font-normal leading-none text-white">
                   Menu
                 </h1>
               </div>
-              <div onClick={openSearch} className="search flex gap-5 items-end cursor-pointer">
+              {/* <div onClick={openSearch} className="search flex gap-5 items-end cursor-pointer">
                 <div>
                   <img src={searchicon} alt="" className="cursor-pointer" />
                 </div>
@@ -114,19 +132,39 @@ function Menu({ functionality, open }) {
                 <h1 className="font-ave text-base font-normal leading-none text-white">
                   Search
                 </h1>
-              </div>
+              </div> */}
             </div>
 
             <div className="logo ">
               <img src={logo} alt="" />
             </div>
 
-            <div className="two flex gap-15">
-              <div onClick={openRegister} className="register cursor-pointer">
-                <h1 className="font-ave text-base font-normal text-white">
-                  Register / Log In
-                </h1>
-              </div>
+            <div className="two flex gap-8 lg:gap-16 items-center">
+              {/* {user ? (
+                // If user is logged in, show email and logout button
+                <div className="flex items-center gap-4">
+                  <span className="font-ave text-sm lg:text-base font-semibold whitespace-nowrap text-white">
+                    {user.email}
+                  </span>
+                  <button
+                    onClick={handleLogout}
+                    className="border rounded-md px-2 py-1 text-[#444C40] font-med text-xs lg:text-sm bg-white "
+                  >
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                // If not logged in, show Register / Log In
+                <div
+                  onClick={openRegister}
+                  className="register cursor-pointer"
+                >
+                  <h1 className="font-ave text-xs lg:text-base font-normal whitespace-nowrap text-white">
+                    Register / Log In
+                  </h1>
+                </div>
+              )} */}
+              
               <div  onClick={openCart} className="cart px-[61px] relative">
                 <div className="absolute bg-white text-[#444C40] rounded-full size-4 text-xs flex justify-center items-center -top-1 right-14 ">
                   {totalQuantity}
